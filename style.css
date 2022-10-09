@@ -1,0 +1,59 @@
+/* fonts */
+/* LXGW Wenkai */
+@import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css');
+/* Fira code */
+@import url('https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css');
+/* 思源宋体 */
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+SC:200,300,400,500,600,700,900');
+
+/* Dark theme */
+:root {
+  color-scheme: light dark;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Noto Serif SC', serif;
+}
+
+p, li, table {
+  font-family: 'LXGW Wenkai Lite', serif;
+}
+
+p.caption {
+  color: #777;
+  margin-top: 10px;
+}
+
+p code, table code {
+  white-space: inherit;
+  font-family: 'Fira Code', monospace;
+}
+
+pre {
+  word-break: normal;
+  word-wrap: normal;
+  font-family: 'Fira Code', monospace;
+}
+
+pre code {
+  white-space: inherit;
+}
+
+.mjx-chtml {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* img */
+div.figure {
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  max-width: 80%;
+}
+
+p.caption {
+  text-align: center;
+}
