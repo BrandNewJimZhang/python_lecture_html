@@ -251,10 +251,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">2.2.1</span> Python 3.10 新特性<a href="python-简介与环境安装.html#python-3.10-新特性" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Python 3.10 版本于 2021 年 10 月发布（小版本发布时间表参见 <a href="https://peps.python.org/pep-0619/">PEP 619 – Python 3.10 Release Schedule</a>），这个版本带来了很多新特性，比较重要的新特性包括：</p>
 <ul>
-<li><a href="https://peps.python.org/pep-0597/">PEP 597 – Add optional <code>EncodingWarning</code></a>：在 Python 3.10 版本中，当你使用 <code>open()</code> 函数打开一个文件时，如果没有指定编码方式，那么 Python 解释器会发出一个警告，提示你应该指定编码方式。</li>
+<li><a href="https://peps.python.org/pep-0597/">PEP 597 - Add optional <code>EncodingWarning</code></a>：在 Python 3.10 版本中，当你使用 <code>open()</code> 函数打开一个文件时，如果没有指定编码方式，那么 Python 解释器会发出一个警告，提示你应该指定编码方式。</li>
 <li><a href="https://www.python.org/dev/peps/pep-0604/">PEP 604 - Allow using <code>|</code> in type hints</a>：在 Python 3.10 版本中，类型提示中的 <code>|</code> 运算符可以用于表示联合类型（union type）。比如，<code>int | str</code> 表示 <code>int</code> 或 <code>str</code> 类型。</li>
-<li><a href="https://www.python.org/dev/peps/pep-0626/">PEP 626 – Precise line numbers for debugging and other tools.</a>：报错精准到行甚至是字符。</li>
-<li><a href="https://www.python.org/dev/peps/pep-0634/">PEP 634 – Structural Pattern Matching: Specification</a>：Python 3.10 版本中引入了模式匹配（pattern matching）语法，可以用于替代 <code>if-elif-else</code> 语句。</li>
+<li><a href="https://www.python.org/dev/peps/pep-0626/">PEP 626 - Precise line numbers for debugging and other tools.</a>：报错精准到行甚至是字符。</li>
+<li><a href="https://www.python.org/dev/peps/pep-0634/">PEP 634 - Structural Pattern Matching: Specification</a>：Python 3.10 版本中引入了模式匹配（pattern matching）语法，可以用于替代 <code>if-elif-else</code> 语句。</li>
 </ul>
 </div>
 <div id="visual-studio-code" class="section level3 hasAnchor" number="2.2.2">
@@ -282,7 +282,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h4><span class="header-section-number">2.3.1.1</span> Windows<a href="python-简介与环境安装.html#windows" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <div id="物理安装法" class="section level5 hasAnchor" number="2.3.1.1.1">
 <h5><span class="header-section-number">2.3.1.1.1</span> 物理安装法<a href="python-简介与环境安装.html#物理安装法" class="anchor-section" aria-label="Anchor link to header"></a></h5>
-<p>首先下载 Python 安装包，以 Python 3.10.7 为例，前往<a href="https://www.python.org/downloads/release/python-3107/">Python 3.10.7</a> 一般来说，64 位系统下载 64 位安装包，32 位系统下载 32 位安装包。</p>
+<p>首先下载 Python 安装包，以 Python 3.10.7 为例，前往 <a href="https://www.python.org/downloads/release/python-3107/">Python 3.10.7</a> 的下载页面就好了。一般来说，64 位系统下载 64 位安装包，32 位系统下载 32 位安装包。对于 64 位的系统来说，下载 Windows installer (64-bit) 就可以了。</p>
 <p>下载完成后，双击安装包，按照提示安装即可。注意，安装时一定要勾选 <code>Add Python 3.10 to PATH</code> 选项，这样就可以在任意目录下使用 Python 命令了。比如，我们使用 powershell 等命令行工具，就可以直接输入 <code>python</code> 命令来启动 Python 解释器了，比如：</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb5-1"><a href="python-简介与环境安装.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">PS</span> C<span class="op">:</span>\Users\user<span class="op">&gt;</span> python <span class="op">--</span>version</span>
 <span id="cb5-2"><a href="python-简介与环境安装.html#cb5-2" aria-hidden="true" tabindex="-1"></a>Python 3<span class="op">.</span><span class="fu">10</span><span class="op">.</span><span class="fu">7</span></span></code></pre></div>
@@ -292,53 +292,61 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><strong>本方法只适用于 Windows 10 1709（版本 16299）或更高版本，当然，Windows 11 也可以。</strong></p>
 <p>不会吧不会吧，不会还有人不知道 Windows 也有包管理器吧？大家可能多多少少听说过 <a href="https://chocolatey.org/">Chocolatey</a>，它是 Windows 下的包管理器，它可以帮助你安装各种软件，包括 Python。但是我不会推荐 Chocolatey，因为他是第三方的软件。</p>
 <p>我在这里会推荐 <a href="https://docs.microsoft.com/zh-cn/windows/package-manager/winget/">winget</a>，它是 Windows 官方的包管理器，它可以帮助你安装各种软件，包括 Python。</p>
-<p>（winget）</p>
+<p>安装 winget 很容易，在 GitHub 上进入 <a href="https://github.com/microsoft/winget-cli/releases/">winget-cli</a> 的发行页面，在最新的发行版本中的 Assets 中点击 <code>Microsoft.DesktopAppInstaller_xxxxxxxx.msixbundle</code> 下载安装即可。</p>
+<p>安装完成后，打开命令行工具，输入 <code>winget</code>，如果出现了 winget 的帮助信息，那么恭喜你，你已经成功安装了 winget。</p>
+<p>接下来，我们就可以使用 winget 来安装 Python 了。在 Powershell 中输入</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb6-1"><a href="python-简介与环境安装.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">PS</span> C<span class="op">:</span>\Users\User<span class="op">&gt;</span> winget install python</span></code></pre></div>
+<p>就可以安装最新的 Python 了。但是安装之后还得配置环境变量才行（这就是为什么在物理安装法中必须要 <code>Add Python 3.10 to PATH</code> 选项的原因），接下来是配置环境变量的方法。</p>
+<p>（确认一下环境变量的问题）</p>
+<p>在 Windows 中（当然在所有操作系统中都是这样），环境变量是一个重要的概念，它可以帮助你在命令行中使用各种命令，比如 <code>python</code>、<code>pip</code> 等。在 Windows 中，环境变量分为系统环境变量和用户环境变量，系统环境变量对所有用户都有效，用户环境变量只对当前用户有效。</p>
+<p>系统环境变量可以在 控制面板 -&gt; 系统和安全 -&gt; 系统 -&gt; 高级系统设置 -&gt; 高级 -&gt; 环境变量 中找到。</p>
 </div>
 </div>
 <div id="macos" class="section level4 hasAnchor" number="2.3.1.2">
 <h4><span class="header-section-number">2.3.1.2</span> macOS<a href="python-简介与环境安装.html#macos" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>实际上，如果你在使用 macOS Monterey 12.3 以上的版本，macOS 会自带一个 Python 3.8.9。我们可以通过在终端中查看 Python 的版本信息：</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="python-简介与环境安装.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python3 <span class="at">--version</span> <span class="kw">&amp;&amp;</span> <span class="fu">which</span> python3</span>
-<span id="cb6-2"><a href="python-简介与环境安装.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Python</span> 3.8.9</span>
-<span id="cb6-3"><a href="python-简介与环境安装.html#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ex">/usr/bin/python3</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="python-简介与环境安装.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python3 <span class="at">--version</span> <span class="kw">&amp;&amp;</span> <span class="fu">which</span> python3</span>
+<span id="cb7-2"><a href="python-简介与环境安装.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Python</span> 3.8.9</span>
+<span id="cb7-3"><a href="python-简介与环境安装.html#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ex">/usr/bin/python3</span></span></code></pre></div>
 <p>如果是更早版本的话，还会存在一个 Python 2.7.18。</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="python-简介与环境安装.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python <span class="at">--version</span> <span class="kw">&amp;&amp;</span> <span class="fu">which</span> python</span>
-<span id="cb7-2"><a href="python-简介与环境安装.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Python</span> 2.7.18</span>
-<span id="cb7-3"><a href="python-简介与环境安装.html#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ex">/usr/bin/python</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="python-简介与环境安装.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python <span class="at">--version</span> <span class="kw">&amp;&amp;</span> <span class="fu">which</span> python</span>
+<span id="cb8-2"><a href="python-简介与环境安装.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Python</span> 2.7.18</span>
+<span id="cb8-3"><a href="python-简介与环境安装.html#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="ex">/usr/bin/python</span></span></code></pre></div>
 <p>我们需要使用 Python 3.10 来继续我们的学习。但是不要担心，我们完全没有必要卸载这些 Python 2.7 和 Python 3.8。在实际开发的过程中，多版本 Python 共存是一个很正常的事情。</p>
 <p>我们可以通过 Homebrew 来安装 Python 3.10。首先我们来安装 Homebrew，按照 <a href="https://brew.sh/index_zh-cn">Homebrew 官网</a>的说明，我们可以在终端中运行以下命令：</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="python-简介与环境安装.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> /bin/bash <span class="at">-c</span> <span class="st">&quot;</span><span class="va">$(</span><span class="ex">curl</span> <span class="at">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="va">)</span><span class="st">&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="python-简介与环境安装.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> /bin/bash <span class="at">-c</span> <span class="st">&quot;</span><span class="va">$(</span><span class="ex">curl</span> <span class="at">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="va">)</span><span class="st">&quot;</span></span></code></pre></div>
 <p>然后我们就可以通过 Homebrew 来安装 Python 3.10 了：</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="python-简介与环境安装.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> brew install python@3.10</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="python-简介与环境安装.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> brew install python@3.10</span></code></pre></div>
 <p>安装完成后，我们可以通过 <code>python3.10</code> 命令来查看 Python 3.10 的版本信息：</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="python-简介与环境安装.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python3.10 <span class="at">--version</span> <span class="kw">&amp;&amp;</span> <span class="fu">which</span> python3.10</span>
-<span id="cb10-2"><a href="python-简介与环境安装.html#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Python</span> 3.10.7</span>
-<span id="cb10-3"><a href="python-简介与环境安装.html#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="ex">/opt/homebrew/bin/python3.10</span></span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="python-简介与环境安装.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python3.10 <span class="at">--version</span> <span class="kw">&amp;&amp;</span> <span class="fu">which</span> python3.10</span>
+<span id="cb11-2"><a href="python-简介与环境安装.html#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Python</span> 3.10.7</span>
+<span id="cb11-3"><a href="python-简介与环境安装.html#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="ex">/opt/homebrew/bin/python3.10</span></span></code></pre></div>
 <p><strong>以下部分可以不做。</strong></p>
 <p>现在电脑里有很多 Python3，但是每次还是：</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="python-简介与环境安装.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python3 <span class="at">--version</span> <span class="kw">&amp;&amp;</span> <span class="fu">which</span> python</span>
-<span id="cb11-2"><a href="python-简介与环境安装.html#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Python</span> 3.8.9</span>
-<span id="cb11-3"><a href="python-简介与环境安装.html#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="ex">/usr/bin/python3</span></span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="python-简介与环境安装.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python3 <span class="at">--version</span> <span class="kw">&amp;&amp;</span> <span class="fu">which</span> python</span>
+<span id="cb12-2"><a href="python-简介与环境安装.html#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Python</span> 3.8.9</span>
+<span id="cb12-3"><a href="python-简介与环境安装.html#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="ex">/usr/bin/python3</span></span></code></pre></div>
 <p>我们可以通过修改环境变量并重命名来让 <code>python3</code> 命令指向 Python 3.10：</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="python-简介与环境安装.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&#39;export PATH=&quot;/opt/homebrew/bin:$PATH&quot;&#39;</span> <span class="op">&gt;&gt;</span> ~/.zshrc</span>
-<span id="cb12-2"><a href="python-简介与环境安装.html#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ~/.zshrc</span>
-<span id="cb12-3"><a href="python-简介与环境安装.html#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /opt/homebrew/bin</span>
-<span id="cb12-4"><a href="python-简介与环境安装.html#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> python3.10 python3</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="python-简介与环境安装.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&#39;export PATH=&quot;/opt/homebrew/bin:$PATH&quot;&#39;</span> <span class="op">&gt;&gt;</span> ~/.zshrc</span>
+<span id="cb13-2"><a href="python-简介与环境安装.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ~/.zshrc</span>
+<span id="cb13-3"><a href="python-简介与环境安装.html#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /opt/homebrew/bin</span>
+<span id="cb13-4"><a href="python-简介与环境安装.html#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> python3.10 python3</span></code></pre></div>
 <p>这个时候重新开启一个终端（shell 进程），我们就可以通过 <code>python3</code> 命令来查看 Python 3.10 的版本信息了：</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="python-简介与环境安装.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python3 <span class="at">--version</span> <span class="kw">&amp;&amp;</span> <span class="fu">which</span> python3</span>
-<span id="cb13-2"><a href="python-简介与环境安装.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Python</span> 3.10.7</span>
-<span id="cb13-3"><a href="python-简介与环境安装.html#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="ex">/opt/homebrew/bin/python3</span></span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="python-简介与环境安装.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python3 <span class="at">--version</span> <span class="kw">&amp;&amp;</span> <span class="fu">which</span> python3</span>
+<span id="cb14-2"><a href="python-简介与环境安装.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Python</span> 3.10.7</span>
+<span id="cb14-3"><a href="python-简介与环境安装.html#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="ex">/opt/homebrew/bin/python3</span></span></code></pre></div>
 </div>
 <div id="linux" class="section level4 hasAnchor" number="2.3.1.3">
 <h4><span class="header-section-number">2.3.1.3</span> Linux<a href="python-简介与环境安装.html#linux" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>一般来说，你既然在使用 Linux 系统的话，你一定了解如何玩转 bash。但是我在这里也再以 debian 系发行版 ubuntu 20.04 为例，来简单介绍一下如何安装 Python 3.10。</p>
 <p>debian 系发行版的包管理器是 apt，我们可以通过以下命令来安装 Python 3.10：</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="python-简介与环境安装.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo apt install python3.10</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="python-简介与环境安装.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo apt install python3.10</span></code></pre></div>
 <p>之后的处理方法和 macOS 系统类似。</p>
 </div>
 </div>
 <div id="visual-studio-code-1" class="section level3 hasAnchor" number="2.3.2">
 <h3><span class="header-section-number">2.3.2</span> Visual Studio Code<a href="python-简介与环境安装.html#visual-studio-code-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Visual Studio Code 是一个非常好用的代码编辑器，我们可以通过 <a href="https://code.visualstudio.com/">Visual Studio Code 官网</a> 来下载安装。（点一下就行的那种）</p>
 <p>Visual Studio Code 安装好了之后，为了能够使用 Visual Studio Code 来进行 Python 开发，我们需要额外安装几个插件：</p>
 <ul>
 <li>Chinese (Simplified) Language Pack for Visual Studio Code - 用于支持中文</li>
@@ -350,7 +358,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="jupyter-notebook-1" class="section level3 hasAnchor" number="2.3.3">
 <h3><span class="header-section-number">2.3.3</span> Jupyter Notebook<a href="python-简介与环境安装.html#jupyter-notebook-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><code>jupyter</code> 只是一个命令行工具，它可以帮助我们启动 Jupyter Notebook。我们可以通过以下命令来安装 Jupyter Notebook：</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="python-简介与环境安装.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pip install jupyter</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="python-简介与环境安装.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pip install jupyter</span></code></pre></div>
 <p>安装完成后，我们在 Visual Studio Code 中打开一个目录，在目录中新建一个 <code>*.ipynb</code> 文件，就可以开始使用 Jupyter Notebook 了。</p>
 </div>
 </div>
