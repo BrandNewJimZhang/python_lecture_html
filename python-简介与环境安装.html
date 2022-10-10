@@ -24,7 +24,7 @@
 <meta name="author" content="Jim Zhang" />
 
 
-<meta name="date" content="2022-10-09" />
+<meta name="date" content="2022-10-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -281,7 +281,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">2.3.1</span> Python</h3>
 <div id="windows" class="section level4" number="2.3.1.1">
 <h4><span class="header-section-number">2.3.1.1</span> Windows</h4>
+<div id="物理安装法" class="section level5" number="2.3.1.1.1">
+<h5><span class="header-section-number">2.3.1.1.1</span> 物理安装法</h5>
 <p>对于 Windows 系统而言，</p>
+</div>
+<div id="包管理器法" class="section level5" number="2.3.1.1.2">
+<h5><span class="header-section-number">2.3.1.1.2</span> 包管理器法</h5>
+</div>
 </div>
 <div id="macos" class="section level4" number="2.3.1.2">
 <h4><span class="header-section-number">2.3.1.2</span> macOS</h4>
@@ -300,10 +306,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="python-简介与环境安装.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> brew install python@3.10</span></code></pre></div>
 <p>安装完成后，我们可以通过 <code>python3.10</code> 命令来查看 Python 3.10 的版本信息：</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="python-简介与环境安装.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python3.10 <span class="at">--version</span> <span class="kw">&amp;&amp;</span> <span class="fu">which</span> python3.10</span>
-<span id="cb9-2"><a href="python-简介与环境安装.html#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Python</span> 3.10.0</span>
+<span id="cb9-2"><a href="python-简介与环境安装.html#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Python</span> 3.10.7</span>
 <span id="cb9-3"><a href="python-简介与环境安装.html#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="ex">/opt/homebrew/bin/python3.10</span></span></code></pre></div>
 <p><strong>以下为可选项！！！（Linux 系统相关）</strong></p>
-<p>（python 3）</p>
+<p>现在电脑里有很多 Python3，但是每次还是：</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="python-简介与环境安装.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python3 <span class="at">--version</span> <span class="kw">&amp;&amp;</span> <span class="fu">which</span> python</span>
+<span id="cb10-2"><a href="python-简介与环境安装.html#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Python</span> 3.8.9</span>
+<span id="cb10-3"><a href="python-简介与环境安装.html#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="ex">/usr/bin/python3</span></span></code></pre></div>
+<p>我们可以通过修改环境变量并重命名来让 <code>python3</code> 命令指向 Python 3.10：</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="python-简介与环境安装.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> echo <span class="st">&#39;export PATH=&quot;/opt/homebrew/bin:$PATH&quot;&#39;</span> <span class="op">&gt;&gt;</span> ~/.zshrc</span>
+<span id="cb11-2"><a href="python-简介与环境安装.html#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> source ~/.zshrc</span>
+<span id="cb11-3"><a href="python-简介与环境安装.html#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd /opt/homebrew/bin</span>
+<span id="cb11-4"><a href="python-简介与环境安装.html#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mv python3.10 python3</span></code></pre></div>
+<p>这个时候重新开启一个终端（shell 进程），我们就可以通过 <code>python3</code> 命令来查看 Python 3.10 的版本信息了：</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="python-简介与环境安装.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python3 <span class="at">--version</span> <span class="kw">&amp;&amp;</span> <span class="fu">which</span> python3</span>
+<span id="cb12-2"><a href="python-简介与环境安装.html#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Python</span> 3.10.7</span>
+<span id="cb12-3"><a href="python-简介与环境安装.html#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="ex">/opt/homebrew/bin/python3</span></span></code></pre></div>
 </div>
 <div id="linux" class="section level4" number="2.3.1.3">
 <h4><span class="header-section-number">2.3.1.3</span> Linux</h4>
