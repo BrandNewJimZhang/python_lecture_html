@@ -24,3 +24,17 @@ linux
 visual-studio-code-1
 jupyter-notebook-1
 作业与思考题
+基本语法与基本数据类型
+基本语法
+变量
+基本数据类型及其基本操作
+整数
+复数
+浮点数
+布尔值
+none
+字符串
+列表
+元组
+字典
+集合
