@@ -30,6 +30,11 @@ p code, table code {
 }
 
 /* code */
+code {
+  padding: 2px;
+  font-size: 14px;
+}
+
 pre {
   word-break: normal;
   word-wrap: normal;
@@ -58,8 +63,9 @@ div.figure {
   flex-direction: column;
 }
 
-img {
-  max-width: 80%;
+.book .book-body .page-wrapper .page-inner section.normal img {
+  width: max(70%, 600px);
+  margin: 0 auto;
 }
 
 p.caption {
