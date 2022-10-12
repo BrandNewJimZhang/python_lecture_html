@@ -176,6 +176,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.3.4" data-path="基本语法与基本数据类型.html"><a href="基本语法与基本数据类型.html#分号与逗号"><i class="fa fa-check"></i><b>3.3.4</b> 分号与逗号</a></li>
 <li class="chapter" data-level="3.3.5" data-path="基本语法与基本数据类型.html"><a href="基本语法与基本数据类型.html#换行"><i class="fa fa-check"></i><b>3.3.5</b> 换行</a></li>
 <li class="chapter" data-level="3.3.6" data-path="基本语法与基本数据类型.html"><a href="基本语法与基本数据类型.html#导入-package"><i class="fa fa-check"></i><b>3.3.6</b> 导入 package</a></li>
+<li class="chapter" data-level="3.3.7" data-path="基本语法与基本数据类型.html"><a href="基本语法与基本数据类型.html#保留字"><i class="fa fa-check"></i><b>3.3.7</b> 保留字</a></li>
+<li class="chapter" data-level="3.3.8" data-path="基本语法与基本数据类型.html"><a href="基本语法与基本数据类型.html#异常"><i class="fa fa-check"></i><b>3.3.8</b> 异常</a></li>
 </ul></li>
 <li class="chapter" data-level="3.4" data-path="基本语法与基本数据类型.html"><a href="基本语法与基本数据类型.html#基本数据类型及其基本操作"><i class="fa fa-check"></i><b>3.4</b> 基本数据类型及其基本操作</a>
 <ul>
@@ -190,6 +192,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.4.9" data-path="基本语法与基本数据类型.html"><a href="基本语法与基本数据类型.html#字典"><i class="fa fa-check"></i><b>3.4.9</b> 字典</a></li>
 <li class="chapter" data-level="3.4.10" data-path="基本语法与基本数据类型.html"><a href="基本语法与基本数据类型.html#集合"><i class="fa fa-check"></i><b>3.4.10</b> 集合</a></li>
 </ul></li>
+<li class="chapter" data-level="3.5" data-path="基本语法与基本数据类型.html"><a href="基本语法与基本数据类型.html#运行一个-python-文件"><i class="fa fa-check"></i><b>3.5</b> 运行一个 python 文件</a></li>
+<li class="chapter" data-level="3.6" data-path="基本语法与基本数据类型.html"><a href="基本语法与基本数据类型.html#思考题与作业"><i class="fa fa-check"></i><b>3.6</b> 思考题与作业</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -217,6 +221,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="说明" class="section level2 hasAnchor" number="3.1">
 <h2><span class="header-section-number">3.1</span> 说明<a href="基本语法与基本数据类型.html#说明" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>本讲很多内容都是在 python 交互式环境下进行的，如果你想在本地运行，可以在命令行输入 <code>python</code> 进入交互式环境。比如：</p>
+<p>（差个 macOS 的）</p>
 <div class="sourceCode" id="cb17"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb17-1"><a href="基本语法与基本数据类型.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">PS</span> C<span class="op">:</span>\Users\user<span class="op">&gt;</span> python</span>
 <span id="cb17-2"><a href="基本语法与基本数据类型.html#cb17-2" aria-hidden="true" tabindex="-1"></a>Python 3<span class="op">.</span><span class="fu">10</span><span class="op">.</span><span class="fu">7</span> <span class="op">(</span>tags<span class="op">/</span>v3<span class="op">.</span><span class="fu">10</span><span class="op">.</span><span class="fu">7</span><span class="op">:</span>6cc6b13<span class="op">,</span> Sep  5 2022<span class="op">,</span> 14<span class="op">:</span>08<span class="op">:</span>36<span class="op">)</span> <span class="op">[</span>MSC v<span class="op">.</span><span class="fu">1933</span> 64 bit <span class="op">(</span>AMD64<span class="op">)]</span> on win32</span>
 <span id="cb17-3"><a href="基本语法与基本数据类型.html#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">Type</span> <span class="st">&quot;help&quot;</span><span class="op">,</span> <span class="st">&quot;copyright&quot;</span><span class="op">,</span> <span class="st">&quot;credits&quot;</span> or <span class="st">&quot;license&quot;</span> <span class="kw">for</span> more information<span class="op">.</span></span>
@@ -244,7 +249,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>变量名必须是大小写英文、数字和 <code>_</code> 的组合，且不能用数字开头。</p>
 <div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="基本语法与基本数据类型.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> variable <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb19-2"><a href="基本语法与基本数据类型.html#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> variable1 <span class="op">=</span> <span class="st">&#39;This is variable1&#39;</span></span>
-<span id="cb19-3"><a href="基本语法与基本数据类型.html#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> _variable <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb19-3"><a href="基本语法与基本数据类型.html#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> _variable <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
 <span id="cb19-4"><a href="基本语法与基本数据类型.html#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> PI <span class="op">=</span> <span class="fl">3.1415926</span> <span class="co"># 大家的共识是常量名用全大写字母</span></span></code></pre></div>
 <p>刚才的注释中提到了常量，这里我们先简单介绍一下常量。常量是指在程序运行过程中不会改变的量，在很多其他语言都有常量的概念，比如：</p>
 <div class="sourceCode" id="cb20"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb20-1"><a href="基本语法与基本数据类型.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">// JavaScript</span></span>
@@ -275,7 +280,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="缩进" class="section level3 hasAnchor" number="3.3.3">
 <h3><span class="header-section-number">3.3.3</span> 缩进<a href="基本语法与基本数据类型.html#缩进" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>（这里不能这么讲）
+<p>不同于其他语言，
+（这里不能这么讲）
 Python 中的缩进是通过空格或 tab 实现的。缩进的空格数目没有限制，但是要保持一致。</p>
 <div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="基本语法与基本数据类型.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">True</span>:</span>
 <span id="cb23-2"><a href="基本语法与基本数据类型.html#cb23-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;True&#39;</span>)</span>
@@ -301,67 +307,127 @@ Python 中的缩进是通过空格或 tab 实现的。缩进的空格数目没�
 <div id="导入-package" class="section level3 hasAnchor" number="3.3.6">
 <h3><span class="header-section-number">3.3.6</span> 导入 package<a href="基本语法与基本数据类型.html#导入-package" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
+<div id="保留字" class="section level3 hasAnchor" number="3.3.7">
+<h3><span class="header-section-number">3.3.7</span> 保留字<a href="基本语法与基本数据类型.html#保留字" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Python 中的保留字是指在 Python 中已经被使用的关键字，不能用作变量名、函数名、类名等。</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="基本语法与基本数据类型.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="im">import</span> keyword</span>
+<span id="cb26-2"><a href="基本语法与基本数据类型.html#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> keyword.kwlist</span>
+<span id="cb26-3"><a href="基本语法与基本数据类型.html#cb26-3" aria-hidden="true" tabindex="-1"></a>[<span class="st">&#39;False&#39;</span>, <span class="st">&#39;None&#39;</span>, <span class="st">&#39;True&#39;</span>, <span class="st">&#39;and&#39;</span>, <span class="st">&#39;as&#39;</span>, <span class="st">&#39;assert&#39;</span>, <span class="st">&#39;async&#39;</span>, <span class="st">&#39;await&#39;</span>, <span class="st">&#39;break&#39;</span>, <span class="st">&#39;class&#39;</span>, <span class="st">&#39;continue&#39;</span>, <span class="st">&#39;def&#39;</span>, <span class="st">&#39;del&#39;</span>, <span class="st">&#39;elif&#39;</span>, <span class="st">&#39;else&#39;</span>, <span class="st">&#39;except&#39;</span>, <span class="st">&#39;finally&#39;</span>, <span class="st">&#39;for&#39;</span>, <span class="st">&#39;from&#39;</span>, <span class="st">&#39;global&#39;</span>, <span class="st">&#39;if&#39;</span>, <span class="st">&#39;import&#39;</span>, <span class="st">&#39;in&#39;</span>, <span class="st">&#39;is&#39;</span>, <span class="st">&#39;lambda&#39;</span>, <span class="st">&#39;nonlocal&#39;</span>, <span class="st">&#39;not&#39;</span>, <span class="st">&#39;or&#39;</span>, <span class="st">&#39;pass&#39;</span>, <span class="st">&#39;raise&#39;</span>, <span class="st">&#39;return&#39;</span>, <span class="st">&#39;try&#39;</span>, <span class="st">&#39;while&#39;</span>, <span class="st">&#39;with&#39;</span>, <span class="st">&#39;yield&#39;</span>]</span></code></pre></div>
+<p>上述 <code>keyword.kwlist</code> 就是 Python 中的保留字列表。（后面我们会讲什么是列表）</p>
+</div>
+<div id="异常" class="section level3 hasAnchor" number="3.3.8">
+<h3><span class="header-section-number">3.3.8</span> 异常<a href="基本语法与基本数据类型.html#异常" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>在 Python 中，异常是指程序在运行过程中出现的错误，比如除数为 0、缩进错误、变量未定义等等。</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="基本语法与基本数据类型.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">1</span> <span class="op">/</span> <span class="dv">0</span></span>
+<span id="cb27-2"><a href="基本语法与基本数据类型.html#cb27-2" aria-hidden="true" tabindex="-1"></a>Traceback (most recent call last):</span>
+<span id="cb27-3"><a href="基本语法与基本数据类型.html#cb27-3" aria-hidden="true" tabindex="-1"></a>  File <span class="st">&quot;&lt;stdin&gt;&quot;</span>, line <span class="dv">1</span>, <span class="kw">in</span> <span class="op">&lt;</span>module<span class="op">&gt;</span></span>
+<span id="cb27-4"><a href="基本语法与基本数据类型.html#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="pp">ZeroDivisionError</span>: division by zero</span>
+<span id="cb27-5"><a href="基本语法与基本数据类型.html#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="cf">if</span> <span class="va">True</span>:</span>
+<span id="cb27-6"><a href="基本语法与基本数据类型.html#cb27-6" aria-hidden="true" tabindex="-1"></a>... <span class="bu">print</span>(<span class="st">&#39;True&#39;</span>)</span>
+<span id="cb27-7"><a href="基本语法与基本数据类型.html#cb27-7" aria-hidden="true" tabindex="-1"></a>  File <span class="st">&quot;&lt;stdin&gt;&quot;</span>, line <span class="dv">2</span></span>
+<span id="cb27-8"><a href="基本语法与基本数据类型.html#cb27-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;True&#39;</span>)</span>
+<span id="cb27-9"><a href="基本语法与基本数据类型.html#cb27-9" aria-hidden="true" tabindex="-1"></a>        <span class="op">^</span></span>
+<span id="cb27-10"><a href="基本语法与基本数据类型.html#cb27-10" aria-hidden="true" tabindex="-1"></a><span class="pp">IndentationError</span>: expected an indented block after <span class="st">&#39;if&#39;</span> statement on line <span class="dv">1</span></span>
+<span id="cb27-11"><a href="基本语法与基本数据类型.html#cb27-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="co"># 如果是较早版本的 Python 的话是 IndentationError: expected an indented block</span></span>
+<span id="cb27-12"><a href="基本语法与基本数据类型.html#cb27-12" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(a)</span>
+<span id="cb27-13"><a href="基本语法与基本数据类型.html#cb27-13" aria-hidden="true" tabindex="-1"></a>Traceback (most recent call last):</span>
+<span id="cb27-14"><a href="基本语法与基本数据类型.html#cb27-14" aria-hidden="true" tabindex="-1"></a>  File <span class="st">&quot;&lt;stdin&gt;&quot;</span>, line <span class="dv">1</span>, <span class="kw">in</span> <span class="op">&lt;</span>module<span class="op">&gt;</span></span>
+<span id="cb27-15"><a href="基本语法与基本数据类型.html#cb27-15" aria-hidden="true" tabindex="-1"></a><span class="pp">NameError</span>: name <span class="st">&#39;a&#39;</span> <span class="kw">is</span> <span class="kw">not</span> defined</span></code></pre></div>
+<p>对于异常不要慌，需要精准定位异常的位置，然后根据异常的类型进行修复。（这里想一想怎么说？）</p>
+</div>
 </div>
 <div id="基本数据类型及其基本操作" class="section level2 hasAnchor" number="3.4">
 <h2><span class="header-section-number">3.4</span> 基本数据类型及其基本操作<a href="基本语法与基本数据类型.html#基本数据类型及其基本操作" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>整数、复数、浮点数、布尔值、None、字符串、列表、元组、字典、集合</p>
+<p><code>type()</code> 函数可以用来查看变量的类型。示例如下：</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="基本语法与基本数据类型.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb28-2"><a href="基本语法与基本数据类型.html#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">type</span>(a)</span>
+<span id="cb28-3"><a href="基本语法与基本数据类型.html#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="kw">class</span> <span class="st">&#39;int&#39;</span><span class="op">&gt;</span></span>
+<span id="cb28-4"><a href="基本语法与基本数据类型.html#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> b <span class="op">=</span> <span class="fl">1.0</span></span>
+<span id="cb28-5"><a href="基本语法与基本数据类型.html#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">type</span>(b)</span>
+<span id="cb28-6"><a href="基本语法与基本数据类型.html#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="kw">class</span> <span class="st">&#39;float&#39;</span><span class="op">&gt;</span></span>
+<span id="cb28-7"><a href="基本语法与基本数据类型.html#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> c <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> <span class="ot">2j</span></span>
+<span id="cb28-8"><a href="基本语法与基本数据类型.html#cb28-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">type</span>(c)</span>
+<span id="cb28-9"><a href="基本语法与基本数据类型.html#cb28-9" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="kw">class</span> <span class="st">&#39;complex&#39;</span><span class="op">&gt;</span></span></code></pre></div>
 <div id="整数" class="section level3 hasAnchor" number="3.4.1">
 <h3><span class="header-section-number">3.4.1</span> 整数<a href="基本语法与基本数据类型.html#整数" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>整数是没有小数部分的数字，可以是正数、负数或零。</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="基本语法与基本数据类型.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> <span class="dv">1</span></span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="基本语法与基本数据类型.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> <span class="dv">1</span></span></code></pre></div>
+<p>一般来说，整数的运算符有 <code>+</code>、<code>-</code>、<code>*</code>、<code>/</code>、<code>//</code>、<code>%</code>、<code>**</code>。</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="基本语法与基本数据类型.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">5</span> <span class="op">+</span> <span class="dv">3</span></span>
+<span id="cb30-2"><a href="基本语法与基本数据类型.html#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="dv">8</span></span>
+<span id="cb30-3"><a href="基本语法与基本数据类型.html#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">5</span> <span class="op">-</span> <span class="dv">3</span></span>
+<span id="cb30-4"><a href="基本语法与基本数据类型.html#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span></span>
+<span id="cb30-5"><a href="基本语法与基本数据类型.html#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">5</span> <span class="op">*</span> <span class="dv">3</span></span>
+<span id="cb30-6"><a href="基本语法与基本数据类型.html#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="dv">15</span></span>
+<span id="cb30-7"><a href="基本语法与基本数据类型.html#cb30-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">5</span> <span class="op">/</span> <span class="dv">3</span>  <span class="co"># 除法</span></span>
+<span id="cb30-8"><a href="基本语法与基本数据类型.html#cb30-8" aria-hidden="true" tabindex="-1"></a><span class="fl">1.6666666666666667</span></span>
+<span id="cb30-9"><a href="基本语法与基本数据类型.html#cb30-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">5</span> <span class="op">//</span> <span class="dv">3</span> <span class="co"># 整除</span></span>
+<span id="cb30-10"><a href="基本语法与基本数据类型.html#cb30-10" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span></span>
+<span id="cb30-11"><a href="基本语法与基本数据类型.html#cb30-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">5</span> <span class="op">%</span> <span class="dv">3</span>  <span class="co"># 取余</span></span>
+<span id="cb30-12"><a href="基本语法与基本数据类型.html#cb30-12" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span></span>
+<span id="cb30-13"><a href="基本语法与基本数据类型.html#cb30-13" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">5</span> <span class="op">**</span> <span class="dv">3</span> <span class="co"># 乘方</span></span>
+<span id="cb30-14"><a href="基本语法与基本数据类型.html#cb30-14" aria-hidden="true" tabindex="-1"></a><span class="dv">125</span></span></code></pre></div>
 </div>
 <div id="复数" class="section level3 hasAnchor" number="3.4.2">
 <h3><span class="header-section-number">3.4.2</span> 复数<a href="基本语法与基本数据类型.html#复数" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>复数由实数部分和虚数部分构成，可以用a + bj或 <code>complex(a,b)</code> 表示， 复数的实部a和虚部b都是浮点型。</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="基本语法与基本数据类型.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> <span class="ot">2j</span></span>
-<span id="cb27-2"><a href="基本语法与基本数据类型.html#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> b <span class="op">=</span> <span class="bu">complex</span>(<span class="dv">1</span>, <span class="dv">2</span>)</span>
-<span id="cb27-3"><a href="基本语法与基本数据类型.html#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> b</span>
-<span id="cb27-4"><a href="基本语法与基本数据类型.html#cb27-4" aria-hidden="true" tabindex="-1"></a>(<span class="dv">1</span><span class="op">+</span><span class="ot">2j</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="基本语法与基本数据类型.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> <span class="ot">2j</span></span>
+<span id="cb31-2"><a href="基本语法与基本数据类型.html#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> b <span class="op">=</span> <span class="bu">complex</span>(<span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb31-3"><a href="基本语法与基本数据类型.html#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> b</span>
+<span id="cb31-4"><a href="基本语法与基本数据类型.html#cb31-4" aria-hidden="true" tabindex="-1"></a>(<span class="dv">1</span><span class="op">+</span><span class="ot">2j</span>)</span></code></pre></div>
 </div>
 <div id="浮点数" class="section level3 hasAnchor" number="3.4.3">
 <h3><span class="header-section-number">3.4.3</span> 浮点数<a href="基本语法与基本数据类型.html#浮点数" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>浮点数由整数部分与小数部分构成，浮点数运算可能会有四舍五入的误差。</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="基本语法与基本数据类型.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> <span class="fl">1.1</span></span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="基本语法与基本数据类型.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> <span class="fl">1.1</span></span></code></pre></div>
 </div>
 <div id="布尔值" class="section level3 hasAnchor" number="3.4.4">
 <h3><span class="header-section-number">3.4.4</span> 布尔值<a href="基本语法与基本数据类型.html#布尔值" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>布尔值只有True、False两种值，要么是True，要么是False，在Python中，可以直接用True、False表示布尔值（请注意大小写），也可以通过布尔运算计算出来。</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="基本语法与基本数据类型.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb29-2"><a href="基本语法与基本数据类型.html#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> b <span class="op">=</span> <span class="va">False</span></span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="基本语法与基本数据类型.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb33-2"><a href="基本语法与基本数据类型.html#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> b <span class="op">=</span> <span class="va">False</span></span></code></pre></div>
 </div>
 <div id="none" class="section level3 hasAnchor" number="3.4.5">
 <h3><span class="header-section-number">3.4.5</span> None<a href="基本语法与基本数据类型.html#none" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>None是Python里一个特殊的类型，用来表示什么都没有，它只有一个值，就是None。</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="基本语法与基本数据类型.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> <span class="va">None</span></span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="基本语法与基本数据类型.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> <span class="va">None</span></span></code></pre></div>
 </div>
 <div id="字符串" class="section level3 hasAnchor" number="3.4.6">
 <h3><span class="header-section-number">3.4.6</span> 字符串<a href="基本语法与基本数据类型.html#字符串" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>字符串是以单引号或双引号括起来的任意文本，比如’abc’，“xyz”等等。</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="基本语法与基本数据类型.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> <span class="st">&#39;abc&#39;</span></span>
-<span id="cb31-2"><a href="基本语法与基本数据类型.html#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> b <span class="op">=</span> <span class="st">&quot;xyz&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a href="基本语法与基本数据类型.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> <span class="st">&#39;abc&#39;</span></span>
+<span id="cb35-2"><a href="基本语法与基本数据类型.html#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> b <span class="op">=</span> <span class="st">&quot;xyz&quot;</span></span></code></pre></div>
 </div>
 <div id="列表" class="section level3 hasAnchor" number="3.4.7">
 <h3><span class="header-section-number">3.4.7</span> 列表<a href="基本语法与基本数据类型.html#列表" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>列表是一种有序的集合，可以随时添加和删除其中的元素。</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="基本语法与基本数据类型.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb36-1"><a href="基本语法与基本数据类型.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span></code></pre></div>
 </div>
 <div id="元组" class="section level3 hasAnchor" number="3.4.8">
 <h3><span class="header-section-number">3.4.8</span> 元组<a href="基本语法与基本数据类型.html#元组" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>元组是另一种有序的列表，但是元组一旦初始化就不能修改。</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="基本语法与基本数据类型.html#cb33-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-2"><a href="基本语法与基本数据类型.html#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> (<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb37-1"><a href="基本语法与基本数据类型.html#cb37-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-2"><a href="基本语法与基本数据类型.html#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> (<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span></code></pre></div>
 </div>
 <div id="字典" class="section level3 hasAnchor" number="3.4.9">
 <h3><span class="header-section-number">3.4.9</span> 字典<a href="基本语法与基本数据类型.html#字典" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>字典是一种无序的集合，使用键-值（key-value）存储，具有极快的查找速度。</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="基本语法与基本数据类型.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> {<span class="st">&#39;a&#39;</span>: <span class="dv">1</span>, <span class="st">&#39;b&#39;</span>: <span class="dv">2</span>, <span class="st">&#39;c&#39;</span>: <span class="dv">3</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb38-1"><a href="基本语法与基本数据类型.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> {<span class="st">&#39;a&#39;</span>: <span class="dv">1</span>, <span class="st">&#39;b&#39;</span>: <span class="dv">2</span>, <span class="st">&#39;c&#39;</span>: <span class="dv">3</span>}</span></code></pre></div>
 </div>
 <div id="集合" class="section level3 hasAnchor" number="3.4.10">
 <h3><span class="header-section-number">3.4.10</span> 集合<a href="基本语法与基本数据类型.html#集合" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>集合是一种无序的不重复元素序列。</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a href="基本语法与基本数据类型.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> {<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>}</span></code></pre></div>
-
+<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="基本语法与基本数据类型.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> {<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>}</span></code></pre></div>
 </div>
+</div>
+<div id="运行一个-python-文件" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> 运行一个 python 文件<a href="基本语法与基本数据类型.html#运行一个-python-文件" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>write something…</p>
+</div>
+<div id="思考题与作业" class="section level2 hasAnchor" number="3.6">
+<h2><span class="header-section-number">3.6</span> 思考题与作业<a href="基本语法与基本数据类型.html#思考题与作业" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+
 </div>
 </div>
             </section>
