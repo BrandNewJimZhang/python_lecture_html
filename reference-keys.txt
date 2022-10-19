@@ -11,6 +11,8 @@ life-is-short-you-need-python
 面向对象
 垃圾回收
 版本迭代
+大版本号
+小版本号
 为什么我会推荐这样的开发环境
 python-3.10-新特性
 visual-studio-code
@@ -48,5 +50,6 @@ none
 元组
 字典
 集合
+安装-package
 运行一个-python-文件
 思考题与作业
