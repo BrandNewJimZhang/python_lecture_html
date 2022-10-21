@@ -44,6 +44,8 @@ jupyter-notebook-1
 复数
 浮点数
 布尔值
+比较运算符
+逻辑运算符
 none
 字符串
 列表

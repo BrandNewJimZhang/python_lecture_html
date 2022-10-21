@@ -24,12 +24,13 @@ p.caption {
   margin-top: 10px;
 }
 
-p code, table code {
+/* code */
+
+p code, table code, pre {
   white-space: inherit;
   font-family: 'Fira Code', monospace;
 }
 
-/* code */
 code {
   padding: 2px;
   font-size: 14px;
