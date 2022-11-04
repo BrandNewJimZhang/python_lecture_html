@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | 《面向科学研究的 Python 基础》讲义</title>
+  <title>Chapter 4 流程控制 | 《面向科学研究的 Python 基础》讲义</title>
   <meta name="description" content="本书是 Jim 在清华大学讲授的《面向科学研究的 Python 基础》课程讲义。" />
   <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | 《面向科学研究的 Python 基础》讲义" />
+  <meta property="og:title" content="Chapter 4 流程控制 | 《面向科学研究的 Python 基础》讲义" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="本书是 Jim 在清华大学讲授的《面向科学研究的 Python 基础》课程讲义。" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | 《面向科学研究的 Python 基础》讲义" />
+  <meta name="twitter:title" content="Chapter 4 流程控制 | 《面向科学研究的 Python 基础》讲义" />
   
   <meta name="twitter:description" content="本书是 Jim 在清华大学讲授的《面向科学研究的 Python 基础》课程讲义。" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-
-
+<link rel="prev" href="基本语法与基本数据类型.html"/>
+<link rel="next" href="函数.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -244,19 +244,110 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="流程控制" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> 流程控制<a href="流程控制.html#流程控制" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>流程控制是指程序执行的顺序控制，包括顺序结构、选择结构和循环结构。</p>
+<div id="顺序结构" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> 顺序结构<a href="流程控制.html#顺序结构" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>顺序结构是最简单的程序结构，它是指程序中的语句按照顺序执行，每个语句执行完毕后，再执行下一个语句。</p>
+</div>
+<div id="选择结构" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> 选择结构<a href="流程控制.html#选择结构" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>选择结构是指程序执行时，根据条件的不同，选择不同的执行路径。</p>
+<div id="if-语句" class="section level3 hasAnchor" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> if 语句<a href="流程控制.html#if-语句" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>if 语句是最简单的选择结构，它的语法格式如下：</p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb56-1"><a href="流程控制.html#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> condition:</span>
+<span id="cb56-2"><a href="流程控制.html#cb56-2" aria-hidden="true" tabindex="-1"></a>    statement</span>
+<span id="cb56-3"><a href="流程控制.html#cb56-3" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> another condition:</span>
+<span id="cb56-4"><a href="流程控制.html#cb56-4" aria-hidden="true" tabindex="-1"></a>    another statement</span>
+<span id="cb56-5"><a href="流程控制.html#cb56-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb56-6"><a href="流程控制.html#cb56-6" aria-hidden="true" tabindex="-1"></a>    final statement</span></code></pre></div>
+<p>if 语句的执行流程如下：</p>
+<ol style="list-style-type: decimal">
+<li>首先计算 <code>condition</code> 的值，如果为 <code>True</code>，则执行 <code>statement</code> 语句块，然后结束 <code>if</code> 语句的执行；如果为 <code>False</code>，则计算 <code>another condition</code> 的值，如果为 <code>True</code>，则执行 <code>another statement</code> 语句块，然后结束 <code>if</code> 语句的执行；如果为 <code>False</code>，则执行 <code>final statement</code> 语句块，然后结束 <code>if</code> 语句的执行。</li>
+<li>如果 <code>if</code> 语句中只有一个条件，没有 <code>elif</code> 和 <code>else</code> 语句，则当 <code>condition</code> 为 <code>True</code> 时执行 <code>statement</code> 语句块，当 <code>condition</code> 为 <code>False</code> 时，不执行任何语句。</li>
+<li>如果 <code>if</code> 语句中只有一个条件，没有 <code>elif</code> 语句，但有 <code>else</code> 语句，则当 <code>condition</code> 为 <code>True</code> 时执行 <code>statement</code> 语句块，当 <code>condition</code> 为 <code>False</code> 时，执行 <code>final statement</code> 语句块。</li>
+</ol>
+</div>
+<div id="match-语句" class="section level3 hasAnchor" number="4.2.2">
+<h3><span class="header-section-number">4.2.2</span> match 语句<a href="流程控制.html#match-语句" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>match 语句是 Python 3.10 新增的选择结构，它的语法格式如下：</p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb57-1"><a href="流程控制.html#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="cf">match</span> value:</span>
+<span id="cb57-2"><a href="流程控制.html#cb57-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> condition:</span>
+<span id="cb57-3"><a href="流程控制.html#cb57-3" aria-hidden="true" tabindex="-1"></a>        statement</span>
+<span id="cb57-4"><a href="流程控制.html#cb57-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> another condition:</span>
+<span id="cb57-5"><a href="流程控制.html#cb57-5" aria-hidden="true" tabindex="-1"></a>        another statement</span>
+<span id="cb57-6"><a href="流程控制.html#cb57-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> _:</span>
+<span id="cb57-7"><a href="流程控制.html#cb57-7" aria-hidden="true" tabindex="-1"></a>        final statement</span></code></pre></div>
+<p>这很容易理解，我们举个例子：</p>
+<div class="sourceCode" id="cb58"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb58-1"><a href="流程控制.html#cb58-1" aria-hidden="true" tabindex="-1"></a>lang <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Enter your language: &quot;</span>)</span>
+<span id="cb58-2"><a href="流程控制.html#cb58-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-3"><a href="流程控制.html#cb58-3" aria-hidden="true" tabindex="-1"></a><span class="cf">match</span> lang:</span>
+<span id="cb58-4"><a href="流程控制.html#cb58-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> <span class="st">&quot;Python&quot;</span>:</span>
+<span id="cb58-5"><a href="流程控制.html#cb58-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;You are learning Python&quot;</span>)</span>
+<span id="cb58-6"><a href="流程控制.html#cb58-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> <span class="st">&quot;Java&quot;</span>:</span>
+<span id="cb58-7"><a href="流程控制.html#cb58-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;You are learning Java&quot;</span>) </span>
+<span id="cb58-8"><a href="流程控制.html#cb58-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> <span class="st">&quot;C++&quot;</span>:</span>
+<span id="cb58-9"><a href="流程控制.html#cb58-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;You are learning C++&quot;</span>)</span>
+<span id="cb58-10"><a href="流程控制.html#cb58-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> _:</span>
+<span id="cb58-11"><a href="流程控制.html#cb58-11" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;You are learning something else&quot;</span>)</span></code></pre></div>
+<p>这个例子中，我们使用 <code>match</code> 语句来判断用户输入的语言，如果是 <code>Python</code>、<code>Java</code> 或 <code>C++</code>，则输出相应的提示，否则输出 <code>You are learning something else</code>。</p>
+</div>
+</div>
+<div id="循环结构" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> 循环结构<a href="流程控制.html#循环结构" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>循环结构是指程序执行时，根据条件的不同，重复执行某段代码。</p>
+<div id="while-循环" class="section level3 hasAnchor" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> while 循环<a href="流程控制.html#while-循环" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>while 循环是一种循环结构，它的语法格式如下：</p>
+<div class="sourceCode" id="cb59"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb59-1"><a href="流程控制.html#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> condition:</span>
+<span id="cb59-2"><a href="流程控制.html#cb59-2" aria-hidden="true" tabindex="-1"></a>    statement</span></code></pre></div>
+<p>while 循环的执行流程如下：</p>
+<p>首先计算 <code>condition</code> 的值，如果为 <code>True</code>，则执行 <code>statement</code> 语句块，然后再次计算 <code>condition</code> 的值，如果为 <code>True</code>，则继续执行 <code>statement</code> 语句块，直到 <code>condition</code> 的值为 <code>False</code>，则结束 <code>while</code> 循环的执行。</p>
+</div>
+<div id="for-循环" class="section level3 hasAnchor" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> for 循环<a href="流程控制.html#for-循环" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>for 循环是另一种循环结构，它的语法格式如下：</p>
+<div class="sourceCode" id="cb60"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb60-1"><a href="流程控制.html#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> item <span class="kw">in</span> iterable:</span>
+<span id="cb60-2"><a href="流程控制.html#cb60-2" aria-hidden="true" tabindex="-1"></a>    statement</span></code></pre></div>
+<p>for 循环的执行流程如下：</p>
+</div>
+<div id="提前退出循环" class="section level3 hasAnchor" number="4.3.3">
+<h3><span class="header-section-number">4.3.3</span> 提前退出循环<a href="流程控制.html#提前退出循环" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="break" class="section level4 hasAnchor" number="4.3.3.1">
+<h4><span class="header-section-number">4.3.3.1</span> break<a href="流程控制.html#break" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+</div>
+<div id="continue" class="section level4 hasAnchor" number="4.3.3.2">
+<h4><span class="header-section-number">4.3.3.2</span> continue<a href="流程控制.html#continue" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+</div>
+</div>
+</div>
+<div id="什么是-iterable" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> 什么是 <code>iterable</code>？<a href="流程控制.html#什么是-iterable" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><code>iterable</code> 是指可以被迭代的对象，它可以是一个序列，也可以是一个生成器，也可以是一个迭代器。</p>
+<div id="序列" class="section level3 hasAnchor" number="4.4.1">
+<h3><span class="header-section-number">4.4.1</span> 序列<a href="流程控制.html#序列" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>序列是指可以通过索引来访问元素的对象，它包括字符串、列表、元组、字节序列、字节数组、range 对象等。</p>
+</div>
+<div id="生成器" class="section level3 hasAnchor" number="4.4.2">
+<h3><span class="header-section-number">4.4.2</span> 生成器<a href="流程控制.html#生成器" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>生成器是指使用 <code>yield</code> 关键字的函数，它可以生成一个生成器对象。</p>
+</div>
+<div id="迭代器" class="section level3 hasAnchor" number="4.4.3">
+<h3><span class="header-section-number">4.4.3</span> 迭代器<a href="流程控制.html#迭代器" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>迭代器是指实现了 <code>__iter__()</code> 和 <code>__next__()</code> 方法的对象，它可以生成一个迭代器对象。</p>
+
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-
+<a href="基本语法与基本数据类型.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="函数.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
