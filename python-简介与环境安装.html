@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 Python 简介与环境安装 | 《面向科学研究的 Python 基础》讲义</title>
   <meta name="description" content="本书是 Jim 在清华大学讲授的《面向科学研究的 Python 基础》课程讲义。" />
-  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 Python 简介与环境安装 | 《面向科学研究的 Python 基础》讲义" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Jim Zhang" />
 
 
-<meta name="date" content="2022-11-04" />
+<meta name="date" content="2023-04-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -92,7 +92,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -105,7 +105,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -152,7 +152,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="python-简介与环境安装.html"><a href="python-简介与环境安装.html#为什么我会推荐这样的开发环境"><i class="fa fa-check"></i><b>2.2</b> 为什么我会推荐这样的开发环境？</a>
 <ul>
-<li class="chapter" data-level="2.2.1" data-path="python-简介与环境安装.html"><a href="python-简介与环境安装.html#python-3.10-新特性"><i class="fa fa-check"></i><b>2.2.1</b> Python 3.10 新特性</a></li>
+<li class="chapter" data-level="2.2.1" data-path="python-简介与环境安装.html"><a href="python-简介与环境安装.html#python-3.11-新特性"><i class="fa fa-check"></i><b>2.2.1</b> Python 3.11 新特性</a></li>
 <li class="chapter" data-level="2.2.2" data-path="python-简介与环境安装.html"><a href="python-简介与环境安装.html#visual-studio-code"><i class="fa fa-check"></i><b>2.2.2</b> Visual Studio Code</a></li>
 <li class="chapter" data-level="2.2.3" data-path="python-简介与环境安装.html"><a href="python-简介与环境安装.html#jupyter-notebook"><i class="fa fa-check"></i><b>2.2.3</b> Jupyter Notebook</a></li>
 </ul></li>
@@ -246,15 +246,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="python-简介与环境安装" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">Chapter 2</span> Python 简介与环境安装<a href="python-简介与环境安装.html#python-简介与环境安装" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>注意，本讲撰写较早（Python <a href="mailto:3.10.7@Windows" class="email">3.10.7@Windows</a>, Python <a href="mailto:3.10.7@MacOS" class="email">3.10.7@MacOS</a>, Python <a href="mailto:3.10.6@Linux" class="email">3.10.6@Linux</a>），可能会和授课时的版本有所不同，但是基本的语法几乎不会有变化。</p>
+<p>注意，本讲撰写于 Python <a href="mailto:3.11.3@Windows" class="email">3.11.3@Windows</a>, Python <a href="mailto:3.11.3@MacOS" class="email">3.11.3@MacOS</a>, Python <a href="mailto:3.11.3@Linux" class="email">3.11.3@Linux</a>，可能会和授课时的版本有所不同，但是基本的语法几乎不会有变化。</p>
 <div id="简介-1" class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> 简介<a href="python-简介与环境安装.html#简介-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>开源程序界总会流传着一些传说，比如 Linux 之父 Linus Torvalds 在卧室一天开发出版本控制软件 git 的核心功能（self-hosting，即用 git 提交 git 代码）。当然 Python 也不例外。1989 年的圣诞节，Python 之父 Guido van Rossum 很是无聊，于是他决定开发一个新的脚本语言，用来取代 ABC 语言。van Rossum 于 1991 年发布了 Python 第一个版本，也就是说到 Python 都已经到了三十而立的年纪了。有关 Python 的不同版本及其之间的关系，以及为什么我们这门课选择 Python 3.10，会在之后的章节展开描述。</p>
+<p>开源程序界总会流传着一些传说，比如 Linux 之父 Linus Torvalds 在卧室一天开发出版本控制软件 git 的核心功能（self-hosting，即用 git 提交 git 代码）。当然 Python 也不例外。1989 年的圣诞节，Python 之父 Guido van Rossum 很是无聊，于是他决定开发一个新的脚本语言，用来取代 ABC 语言。van Rossum 于 1991 年发布了 Python 第一个版本，也就是说到 Python 都已经到了三十而立的年纪了。有关 Python 的不同版本及其之间的关系，以及为什么我们这门课选择 Python 3.11，会在之后的章节展开描述。</p>
 <div id="life-is-short-you-need-python" class="section level3 hasAnchor" number="2.1.1">
 <h3><span class="header-section-number">2.1.1</span> Life is short, you need Python!<a href="python-简介与环境安装.html#life-is-short-you-need-python" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="figure">
-<img src="img/twitter1.png" alt="" />
-<p class="caption">Python 之父 Guido van Rossum 在 Twitter 分享的一个图片</p>
+<div class="float">
+<img src="img/twitter1.png" alt="Python 之父 Guido van Rossum 在 Twitter 分享的一个图片" />
+<div class="figcaption">Python 之父 Guido van Rossum 在 Twitter 分享的一个图片</div>
 </div>
 <p>大家可能或多或少会在各个地方（朋友圈广告，网络培训班，甚至视频分享平台等等）听到过这句话：人生苦短，我用 Python（其实英文原文是 “Life is short, you need Python.”）。这句话的意思是，Python 是一门非常简单易学的编程语言，可以让你在短时间内完成一些复杂的任务。这一节采用这句名言也是希望大家能够在学习 Python 过程中，能够感受到 Python 的简单易学，以及 Python 语言的强大。</p>
 <div id="解释性" class="section level4 hasAnchor" number="2.1.1.1">
@@ -264,30 +264,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="动态类型" class="section level4 hasAnchor" number="2.1.1.2">
 <h4><span class="header-section-number">2.1.1.2</span> 动态类型<a href="python-简介与环境安装.html#动态类型" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>在 C 语言中，你可能见过这样的代码：</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb1-1"><a href="python-简介与环境安装.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> a <span class="op">=</span> <span class="dv">1</span><span class="op">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb1-1"><a href="python-简介与环境安装.html#cb1-1" tabindex="-1"></a><span class="dt">int</span> a <span class="op">=</span> <span class="dv">1</span><span class="op">;</span></span></code></pre></div>
 <p>而 Python 语言是一门动态类型语言，这意味着你不需要在代码中声明变量的类型，Python 解释器会自动推断变量的类型。这样做的好处是，可以让代码更加简洁，而不用每次声明变量的类型。比如：</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="python-简介与环境安装.html#cb2-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">1</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="python-简介与环境安装.html#cb2-1" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">1</span></span></code></pre></div>
 <p>这也是 Python 语言的一个特点，即代码简洁。</p>
 </div>
 <div id="面向对象" class="section level4 hasAnchor" number="2.1.1.3">
 <h4><span class="header-section-number">2.1.1.3</span> 面向对象<a href="python-简介与环境安装.html#面向对象" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>首先，要先解释一下什么叫面向过程与面向对象。面向过程是一种编程范式，即将程序看作一系列的函数调用。比如现在有这样的一个问题：计算 1 到 100 的和。而面向对象是另一种编程范式，即将程序看作一系列的对象调用。面向对象的好处是，可以将程序的复杂度降低，让程序更加易于维护。如果用面向过程的编程范式来解决，可能会写出这样的代码：</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="python-简介与环境安装.html#cb3-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb3-2"><a href="python-简介与环境安装.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">101</span>):</span>
-<span id="cb3-3"><a href="python-简介与环境安装.html#cb3-3" aria-hidden="true" tabindex="-1"></a>    s <span class="op">+=</span> i</span>
-<span id="cb3-4"><a href="python-简介与环境安装.html#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(s)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="python-简介与环境安装.html#cb3-1" tabindex="-1"></a>s <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb3-2"><a href="python-简介与环境安装.html#cb3-2" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">101</span>):</span>
+<span id="cb3-3"><a href="python-简介与环境安装.html#cb3-3" tabindex="-1"></a>    s <span class="op">+=</span> i</span>
+<span id="cb3-4"><a href="python-简介与环境安装.html#cb3-4" tabindex="-1"></a><span class="bu">print</span>(s)</span></code></pre></div>
 <p>而如果用面向对象的编程范式来解决，可能会写出这样的代码：</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="python-简介与环境安装.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Sum:</span>
-<span id="cb4-2"><a href="python-简介与环境安装.html#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, n):</span>
-<span id="cb4-3"><a href="python-简介与环境安装.html#cb4-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.n <span class="op">=</span> n</span>
-<span id="cb4-4"><a href="python-简介与环境安装.html#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="python-简介与环境安装.html#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="bu">sum</span>(<span class="va">self</span>):</span>
-<span id="cb4-6"><a href="python-简介与环境安装.html#cb4-6" aria-hidden="true" tabindex="-1"></a>        s <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb4-7"><a href="python-简介与环境安装.html#cb4-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="va">self</span>.n <span class="op">+</span> <span class="dv">1</span>):</span>
-<span id="cb4-8"><a href="python-简介与环境安装.html#cb4-8" aria-hidden="true" tabindex="-1"></a>            s <span class="op">+=</span> i</span>
-<span id="cb4-9"><a href="python-简介与环境安装.html#cb4-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> s</span>
-<span id="cb4-10"><a href="python-简介与环境安装.html#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-11"><a href="python-简介与环境安装.html#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(Sum(<span class="dv">100</span>).<span class="bu">sum</span>())</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="python-简介与环境安装.html#cb4-1" tabindex="-1"></a><span class="kw">class</span> Sum:</span>
+<span id="cb4-2"><a href="python-简介与环境安装.html#cb4-2" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, n):</span>
+<span id="cb4-3"><a href="python-简介与环境安装.html#cb4-3" tabindex="-1"></a>        <span class="va">self</span>.n <span class="op">=</span> n</span>
+<span id="cb4-4"><a href="python-简介与环境安装.html#cb4-4" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="python-简介与环境安装.html#cb4-5" tabindex="-1"></a>    <span class="kw">def</span> <span class="bu">sum</span>(<span class="va">self</span>):</span>
+<span id="cb4-6"><a href="python-简介与环境安装.html#cb4-6" tabindex="-1"></a>        s <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb4-7"><a href="python-简介与环境安装.html#cb4-7" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="va">self</span>.n <span class="op">+</span> <span class="dv">1</span>):</span>
+<span id="cb4-8"><a href="python-简介与环境安装.html#cb4-8" tabindex="-1"></a>            s <span class="op">+=</span> i</span>
+<span id="cb4-9"><a href="python-简介与环境安装.html#cb4-9" tabindex="-1"></a>        <span class="cf">return</span> s</span>
+<span id="cb4-10"><a href="python-简介与环境安装.html#cb4-10" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="python-简介与环境安装.html#cb4-11" tabindex="-1"></a><span class="bu">print</span>(Sum(<span class="dv">100</span>).<span class="bu">sum</span>())</span></code></pre></div>
 <p>这些代码看不懂并没有关系，我们以后还会提到并进行讲解。Python 语言是一门面向对象的语言，这也是 Python 语言的一个特点，即易于维护。</p>
 </div>
 <div id="垃圾回收" class="section level4 hasAnchor" number="2.1.1.4">
@@ -301,29 +301,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="大版本号" class="section level4 hasAnchor" number="2.1.2.1">
 <h4><span class="header-section-number">2.1.2.1</span> 大版本号<a href="python-简介与环境安装.html#大版本号" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Python 2.0 版本于 2000 年发布，Python 3.0 版本于 2008 年发布。由于这两个版本各自带来了全新的特性，也成为了 Python 语言的分水岭。Python 2.x 版本于 2020 年停止维护（Python 2.7.18），但是 Python 2.x 版本仍然有很多应用，比如一些老的项目，或者一些不得不兼容 Python 2.x 的第三方库（典型的是 ESRI 的 ArcGIS，仍然在使用 Python 2.7）。</p>
-<p>现在市面上主要流行的是 Python 3.x 版本，根据 <a href="https://www.python.org/dev/peps/pep-0602/">PEP 602 - Annual Release Cycle for Python</a> 的建议，一个大版本会维护 5 年，从 Python 3.9 开始，每年都会发布一个新的大版本。Python 3.10 版本于 2021 年 10 月发布。</p>
-<div class="figure">
-<img src="img/pep-602.png" alt="" />
-<p class="caption">PEP 602 建议的 Python 发布周期</p>
+<p>现在市面上主要流行的是 Python 3.x 版本，根据 <a href="https://www.python.org/dev/peps/pep-0602/">PEP 602 - Annual Release Cycle for Python</a> 的建议，一个大版本会维护 5 年，从 Python 3.9 开始，每年都会发布一个新的大版本。Python 3.11 版本于 2021 年 10 月发布。</p>
+<div class="float">
+<img src="img/pep-602.png" alt="PEP 602 建议的 Python 发布周期" />
+<div class="figcaption">PEP 602 建议的 Python 发布周期</div>
 </div>
 </div>
 <div id="小版本号" class="section level4 hasAnchor" number="2.1.2.2">
 <h4><span class="header-section-number">2.1.2.2</span> 小版本号<a href="python-简介与环境安装.html#小版本号" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>有一些同学一定已经注意到了，Python 3.10.8 的 Windows 版本在 2022 年 10 月 11 日（也就是上周）发布。Python 的每一个小版本都是一个补丁版本，它会修复一些 bug，但是很少会添加特性。所以可以认为，Python 的小版本号的差异是不会影响到编程的。</p>
+<p>有一些同学一定已经注意到了，Python 3.11.3 于 2023 年 4 月 16 日（也就是上周）发布。Python 的每一个小版本都是一个补丁版本，它会修复一些 bug，但是很少会添加特性。所以可以认为，Python 的小版本号的差异是不会影响到编程的。</p>
 </div>
 </div>
 </div>
 <div id="为什么我会推荐这样的开发环境" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> 为什么我会推荐这样的开发环境？<a href="python-简介与环境安装.html#为什么我会推荐这样的开发环境" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="python-3.10-新特性" class="section level3 hasAnchor" number="2.2.1">
-<h3><span class="header-section-number">2.2.1</span> Python 3.10 新特性<a href="python-简介与环境安装.html#python-3.10-新特性" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Python 3.10 版本于 2021 年 10 月发布（小版本发布时间表参见 <a href="https://peps.python.org/pep-0619/">PEP 619 – Python 3.10 Release Schedule</a>），这个版本带来了很多新特性，比较重要的新特性包括：</p>
-<ul>
-<li><a href="https://peps.python.org/pep-0597/">PEP 597 - Add optional <code>EncodingWarning</code></a>：在 Python 3.10 版本中，当你使用 <code>open()</code> 函数打开一个文件时，如果没有指定编码方式，那么 Python 解释器会发出一个警告，提示你应该指定编码方式。</li>
-<li><a href="https://www.python.org/dev/peps/pep-0604/">PEP 604 - Allow using <code>|</code> in type hints</a>：在 Python 3.10 版本中，类型提示中的 <code>|</code> 运算符可以用于表示联合类型（union type）。比如，<code>int | str</code> 表示 <code>int</code> 或 <code>str</code> 类型。</li>
-<li><a href="https://www.python.org/dev/peps/pep-0626/">PEP 626 - Precise line numbers for debugging and other tools.</a>：报错精准到行甚至是字符。</li>
-<li><a href="https://www.python.org/dev/peps/pep-0634/">PEP 634 - Structural Pattern Matching: Specification</a>：Python 3.10 版本中引入了模式匹配（pattern matching）语法，可以用于替代 <code>if-elif-else</code> 语句。</li>
-</ul>
+<div id="python-3.11-新特性" class="section level3 hasAnchor" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> Python 3.11 新特性<a href="python-简介与环境安装.html#python-3.11-新特性" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Python 3.11 比 Python 3.10 的速度提升了 10%-60%，其他的特性参见 <a href="https://docs.python.org/3/whatsnew/3.11.html" class="uri">https://docs.python.org/3/whatsnew/3.11.html</a></p>
 </div>
 <div id="visual-studio-code" class="section level3 hasAnchor" number="2.2.2">
 <h3><span class="header-section-number">2.2.2</span> Visual Studio Code<a href="python-简介与环境安装.html#visual-studio-code" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -350,10 +344,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h4><span class="header-section-number">2.3.1.1</span> Windows<a href="python-简介与环境安装.html#windows" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <div id="物理安装法" class="section level5 hasAnchor" number="2.3.1.1.1">
 <h5><span class="header-section-number">2.3.1.1.1</span> 物理安装法<a href="python-简介与环境安装.html#物理安装法" class="anchor-section" aria-label="Anchor link to header"></a></h5>
-<p>首先下载 Python 安装包，以 Python 3.10.7 为例，前往 <a href="https://www.python.org/downloads/release/python-3107/">Python 3.10.7</a> 的下载页面就好了。一般来说，64 位系统下载 64 位安装包，32 位系统下载 32 位安装包。对于 64 位的系统来说，下载 Windows installer (64-bit) 就可以了。</p>
+<p>首先下载 Python 安装包，以 Python 3.11.3 为例，前往 <a href="https://www.python.org/downloads/release/python-3113/">Python 3.11.3</a> 的下载页面就好了。一般来说，64 位系统下载 64 位安装包，32 位系统下载 32 位安装包。对于 64 位的系统来说，下载 Windows installer (64-bit) 就可以了。</p>
 <p>下载完成后，双击安装包，按照提示安装即可。注意，安装时一定要勾选 <code>Add Python 3.10 to PATH</code> 选项，这样就可以在任意目录下使用 Python 命令了。比如，我们使用 powershell 等命令行工具，就可以直接输入 <code>python</code> 命令来启动 Python 解释器了，比如：</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb5-1"><a href="python-简介与环境安装.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">PS</span> C<span class="op">:</span>\Users\user<span class="op">&gt;</span> python <span class="op">--</span>version</span>
-<span id="cb5-2"><a href="python-简介与环境安装.html#cb5-2" aria-hidden="true" tabindex="-1"></a>Python 3<span class="op">.</span><span class="fu">10</span><span class="op">.</span><span class="fu">7</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb5-1"><a href="python-简介与环境安装.html#cb5-1" tabindex="-1"></a><span class="fu">PS</span> C<span class="op">:</span>\Users\user<span class="op">&gt;</span> python <span class="op">--</span>version</span>
+<span id="cb5-2"><a href="python-简介与环境安装.html#cb5-2" tabindex="-1"></a>Python 3<span class="op">.</span><span class="fu">10</span><span class="op">.</span><span class="fu">7</span></span></code></pre></div>
 </div>
 <div id="包管理器法" class="section level5 hasAnchor" number="2.3.1.1.2">
 <h5><span class="header-section-number">2.3.1.1.2</span> 包管理器法<a href="python-简介与环境安装.html#包管理器法" class="anchor-section" aria-label="Anchor link to header"></a></h5>
@@ -363,48 +357,48 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>安装 winget 很容易，在 GitHub 上进入 <a href="https://github.com/microsoft/winget-cli/releases/">winget-cli</a> 的发行页面，在最新的发行版本中的 Assets 中点击 <code>Microsoft.DesktopAppInstaller_xxxxxxxx.msixbundle</code> 下载安装即可。</p>
 <p>安装完成后，打开命令行工具，输入 <code>winget</code>，如果出现了 winget 的帮助信息，那么恭喜你，你已经成功安装了 winget。</p>
 <p>接下来，我们就可以使用 winget 来安装 Python 了。在 Powershell 中输入</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb6-1"><a href="python-简介与环境安装.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">PS</span> C<span class="op">:</span>\Users\User<span class="op">&gt;</span> winget install python</span></code></pre></div>
-<p>就可以安装最新的 Python 了。但是安装之后还得配置环境变量才行（这就是为什么在物理安装法中必须要 <code>Add Python 3.10 to PATH</code> 选项的原因），接下来是配置环境变量的方法。</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb6-1"><a href="python-简介与环境安装.html#cb6-1" tabindex="-1"></a><span class="fu">PS</span> C<span class="op">:</span>\Users\User<span class="op">&gt;</span> winget install python</span></code></pre></div>
+<p>就可以安装最新的 Python 了。但是安装之后还得配置环境变量才行（这就是为什么在物理安装法中必须要 <code>Add Python 3.11 to PATH</code> 选项的原因），接下来是配置环境变量的方法。</p>
 </div>
 </div>
 <div id="macos" class="section level4 hasAnchor" number="2.3.1.2">
 <h4><span class="header-section-number">2.3.1.2</span> macOS<a href="python-简介与环境安装.html#macos" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>实际上，如果你在使用 macOS Monterey 12.3 以上的版本，macOS 会自带一个 Python 3.8.9。我们可以通过在终端中查看 Python 的版本信息：</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="python-简介与环境安装.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python3 <span class="at">--version</span> <span class="kw">&amp;&amp;</span> <span class="fu">which</span> python3</span>
-<span id="cb7-2"><a href="python-简介与环境安装.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Python</span> 3.8.9</span>
-<span id="cb7-3"><a href="python-简介与环境安装.html#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ex">/usr/bin/python3</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="python-简介与环境安装.html#cb7-1" tabindex="-1"></a><span class="ex">$</span> python3 <span class="at">--version</span> <span class="kw">&amp;&amp;</span> <span class="fu">which</span> python3</span>
+<span id="cb7-2"><a href="python-简介与环境安装.html#cb7-2" tabindex="-1"></a><span class="ex">Python</span> 3.8.9</span>
+<span id="cb7-3"><a href="python-简介与环境安装.html#cb7-3" tabindex="-1"></a><span class="ex">/usr/bin/python3</span></span></code></pre></div>
 <p>如果是更早版本的话，还会存在一个 Python 2.7.18。</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="python-简介与环境安装.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python <span class="at">--version</span> <span class="kw">&amp;&amp;</span> <span class="fu">which</span> python</span>
-<span id="cb8-2"><a href="python-简介与环境安装.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Python</span> 2.7.18</span>
-<span id="cb8-3"><a href="python-简介与环境安装.html#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="ex">/usr/bin/python</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="python-简介与环境安装.html#cb8-1" tabindex="-1"></a><span class="ex">$</span> python <span class="at">--version</span> <span class="kw">&amp;&amp;</span> <span class="fu">which</span> python</span>
+<span id="cb8-2"><a href="python-简介与环境安装.html#cb8-2" tabindex="-1"></a><span class="ex">Python</span> 2.7.18</span>
+<span id="cb8-3"><a href="python-简介与环境安装.html#cb8-3" tabindex="-1"></a><span class="ex">/usr/bin/python</span></span></code></pre></div>
 <p>我们需要使用 Python 3.10 来继续我们的学习。但是不要担心，我们完全没有必要卸载这些 Python 2.7 和 Python 3.8。在实际开发的过程中，多版本 Python 共存是一个很正常的事情。</p>
 <p>我们可以通过 Homebrew 来安装 Python 3.10。首先我们来安装 Homebrew，按照 <a href="https://brew.sh/index_zh-cn">Homebrew 官网</a>的说明，我们可以在终端中运行以下命令：</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode zsh"><code class="sourceCode zsh"><span id="cb9-1"><a href="python-简介与环境安装.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> /bin/bash <span class="at">-c</span> <span class="st">&quot;</span><span class="va">$(</span><span class="ex">curl</span> <span class="at">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="va">)</span><span class="st">&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode zsh"><code class="sourceCode zsh"><span id="cb9-1"><a href="python-简介与环境安装.html#cb9-1" tabindex="-1"></a><span class="ex">$</span> /bin/bash <span class="at">-c</span> <span class="st">&quot;</span><span class="va">$(</span><span class="ex">curl</span> <span class="at">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="va">)</span><span class="st">&quot;</span></span></code></pre></div>
 <p>然后我们就可以通过 Homebrew 来安装 Python 3.10 了：</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode zsh"><code class="sourceCode zsh"><span id="cb10-1"><a href="python-简介与环境安装.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> brew install python@3.10</span></code></pre></div>
-<p>安装完成后，我们可以通过 <code>python3.10</code> 命令来查看 Python 3.10 的版本信息：</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode zsh"><code class="sourceCode zsh"><span id="cb11-1"><a href="python-简介与环境安装.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python3.10 <span class="at">--version</span> <span class="kw">&amp;&amp;</span> <span class="bu">which</span> python3.10</span>
-<span id="cb11-2"><a href="python-简介与环境安装.html#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Python</span> 3.10.7</span>
-<span id="cb11-3"><a href="python-简介与环境安装.html#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="ex">/opt/homebrew/bin/python3.10</span></span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode zsh"><code class="sourceCode zsh"><span id="cb10-1"><a href="python-简介与环境安装.html#cb10-1" tabindex="-1"></a><span class="ex">$</span> brew install python@3.10</span></code></pre></div>
+<p>安装完成后，我们可以通过 <code>python3.11</code> 命令来查看 Python 3.11 的版本信息：</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode zsh"><code class="sourceCode zsh"><span id="cb11-1"><a href="python-简介与环境安装.html#cb11-1" tabindex="-1"></a><span class="ex">$</span> python3.11 <span class="at">--version</span> <span class="kw">&amp;&amp;</span> <span class="bu">which</span> python3.11</span>
+<span id="cb11-2"><a href="python-简介与环境安装.html#cb11-2" tabindex="-1"></a><span class="ex">Python</span> 3.11.3</span>
+<span id="cb11-3"><a href="python-简介与环境安装.html#cb11-3" tabindex="-1"></a><span class="ex">/opt/homebrew/bin/python3.11</span></span></code></pre></div>
 <p><strong>以下部分可以不做。</strong></p>
 <p>现在电脑里有很多 Python3，但是每次还是：</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode zsh"><code class="sourceCode zsh"><span id="cb12-1"><a href="python-简介与环境安装.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python3 <span class="at">--version</span> <span class="kw">&amp;&amp;</span> <span class="bu">which</span> python</span>
-<span id="cb12-2"><a href="python-简介与环境安装.html#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Python</span> 3.8.9</span>
-<span id="cb12-3"><a href="python-简介与环境安装.html#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="ex">/usr/bin/python3</span></span></code></pre></div>
-<p>我们可以通过修改环境变量并重命名来让 <code>python3</code> 命令指向 Python 3.10：</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode zsh"><code class="sourceCode zsh"><span id="cb13-1"><a href="python-简介与环境安装.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> echo <span class="st">&#39;export PATH=&quot;/opt/homebrew/bin:$PATH&quot;&#39;</span> <span class="op">&gt;&gt;</span> ~/.zshrc</span>
-<span id="cb13-2"><a href="python-简介与环境安装.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> echo <span class="st">&#39;alias python3=&quot;python3.10&quot;&#39;</span> <span class="op">&gt;&gt;</span> ~/.zshrc</span>
-<span id="cb13-3"><a href="python-简介与环境安装.html#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> source ~/.zshrc</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode zsh"><code class="sourceCode zsh"><span id="cb12-1"><a href="python-简介与环境安装.html#cb12-1" tabindex="-1"></a><span class="ex">$</span> python3 <span class="at">--version</span> <span class="kw">&amp;&amp;</span> <span class="bu">which</span> python</span>
+<span id="cb12-2"><a href="python-简介与环境安装.html#cb12-2" tabindex="-1"></a><span class="ex">Python</span> 3.8.9</span>
+<span id="cb12-3"><a href="python-简介与环境安装.html#cb12-3" tabindex="-1"></a><span class="ex">/usr/bin/python3</span></span></code></pre></div>
+<p>我们可以通过修改环境变量并重命名来让 <code>python3</code> 命令指向 Python 3.11：</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode zsh"><code class="sourceCode zsh"><span id="cb13-1"><a href="python-简介与环境安装.html#cb13-1" tabindex="-1"></a><span class="ex">$</span> echo <span class="st">&#39;export PATH=&quot;/opt/homebrew/bin:$PATH&quot;&#39;</span> <span class="op">&gt;&gt;</span> ~/.zshrc</span>
+<span id="cb13-2"><a href="python-简介与环境安装.html#cb13-2" tabindex="-1"></a><span class="ex">$</span> echo <span class="st">&#39;alias python3=&quot;python3.10&quot;&#39;</span> <span class="op">&gt;&gt;</span> ~/.zshrc</span>
+<span id="cb13-3"><a href="python-简介与环境安装.html#cb13-3" tabindex="-1"></a><span class="ex">$</span> source ~/.zshrc</span></code></pre></div>
 <p>这个时候重新开启一个终端（shell 进程），我们就可以通过 <code>python3</code> 命令来查看 Python 3.10 的版本信息了：</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode zsh"><code class="sourceCode zsh"><span id="cb14-1"><a href="python-简介与环境安装.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python3 <span class="at">--version</span> <span class="kw">&amp;&amp;</span> <span class="bu">which</span> python3</span>
-<span id="cb14-2"><a href="python-简介与环境安装.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Python</span> 3.10.7</span>
-<span id="cb14-3"><a href="python-简介与环境安装.html#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="ex">/opt/homebrew/bin/python3</span></span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode zsh"><code class="sourceCode zsh"><span id="cb14-1"><a href="python-简介与环境安装.html#cb14-1" tabindex="-1"></a><span class="ex">$</span> python3 <span class="at">--version</span> <span class="kw">&amp;&amp;</span> <span class="bu">which</span> python3</span>
+<span id="cb14-2"><a href="python-简介与环境安装.html#cb14-2" tabindex="-1"></a><span class="ex">Python</span> 3.11.3</span>
+<span id="cb14-3"><a href="python-简介与环境安装.html#cb14-3" tabindex="-1"></a><span class="ex">/opt/homebrew/bin/python3</span></span></code></pre></div>
 </div>
 <div id="linux" class="section level4 hasAnchor" number="2.3.1.3">
 <h4><span class="header-section-number">2.3.1.3</span> Linux<a href="python-简介与环境安装.html#linux" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>一般来说，你既然在使用 Linux 系统的话，你一定了解如何玩转 bash。但是我在这里也再以 debian 系发行版 ubuntu 20.04 为例，来简单介绍一下如何安装 Python 3.10。</p>
-<p>debian 系发行版的包管理器是 apt，我们可以通过以下命令来安装 Python 3.10：</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="python-简介与环境安装.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo apt install python3.10</span></code></pre></div>
+<p>一般来说，你既然在使用 Linux 系统的话，你一定了解如何玩转 bash。但是我在这里也再以 debian 系发行版 ubuntu 20.04 为例，来简单介绍一下如何安装 Python 3.11。</p>
+<p>debian 系发行版的包管理器是 apt，我们可以通过以下命令来安装 Python 3.11：</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="python-简介与环境安装.html#cb15-1" tabindex="-1"></a><span class="ex">$</span> sudo apt install python3.11</span></code></pre></div>
 <p>之后的处理方法和 macOS 系统类似。</p>
 </div>
 </div>
@@ -422,7 +416,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="jupyter-notebook-1" class="section level3 hasAnchor" number="2.3.3">
 <h3><span class="header-section-number">2.3.3</span> Jupyter Notebook<a href="python-简介与环境安装.html#jupyter-notebook-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><code>jupyter</code> 只是一个命令行工具，它可以帮助我们启动 Jupyter Notebook。我们可以通过以下命令来安装 Jupyter Notebook：</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="python-简介与环境安装.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pip install jupyter</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="python-简介与环境安装.html#cb16-1" tabindex="-1"></a><span class="ex">$</span> pip install jupyter</span></code></pre></div>
 <p>安装完成后，我们在 Visual Studio Code 中打开一个目录，在目录中新建一个 <code>*.ipynb</code> 文件，就可以开始使用 Jupyter Notebook 了。</p>
 </div>
 </div>

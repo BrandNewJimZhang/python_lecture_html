@@ -14,7 +14,7 @@ life-is-short-you-need-python
 大版本号
 小版本号
 为什么我会推荐这样的开发环境
-python-3.10-新特性
+python-3.11-新特性
 visual-studio-code
 jupyter-notebook
 环境安装

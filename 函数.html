@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 5 函数 | 《面向科学研究的 Python 基础》讲义</title>
   <meta name="description" content="本书是 Jim 在清华大学讲授的《面向科学研究的 Python 基础》课程讲义。" />
-  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 5 函数 | 《面向科学研究的 Python 基础》讲义" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Jim Zhang" />
 
 
-<meta name="date" content="2022-11-04" />
+<meta name="date" content="2023-04-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -92,7 +92,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -105,7 +105,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -152,7 +152,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="python-简介与环境安装.html"><a href="python-简介与环境安装.html#为什么我会推荐这样的开发环境"><i class="fa fa-check"></i><b>2.2</b> 为什么我会推荐这样的开发环境？</a>
 <ul>
-<li class="chapter" data-level="2.2.1" data-path="python-简介与环境安装.html"><a href="python-简介与环境安装.html#python-3.10-新特性"><i class="fa fa-check"></i><b>2.2.1</b> Python 3.10 新特性</a></li>
+<li class="chapter" data-level="2.2.1" data-path="python-简介与环境安装.html"><a href="python-简介与环境安装.html#python-3.11-新特性"><i class="fa fa-check"></i><b>2.2.1</b> Python 3.11 新特性</a></li>
 <li class="chapter" data-level="2.2.2" data-path="python-简介与环境安装.html"><a href="python-简介与环境安装.html#visual-studio-code"><i class="fa fa-check"></i><b>2.2.2</b> Visual Studio Code</a></li>
 <li class="chapter" data-level="2.2.3" data-path="python-简介与环境安装.html"><a href="python-简介与环境安装.html#jupyter-notebook"><i class="fa fa-check"></i><b>2.2.3</b> Jupyter Notebook</a></li>
 </ul></li>
@@ -248,56 +248,56 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Chapter 5</span> 函数<a href="函数.html#函数" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>在介绍了变量之后，我们来看看函数。函数是一段代码，它可以被多次调用。函数可以接受参数，也可以返回值。</p>
 <p>函数的定义使用关键字 <code>def</code>，后面跟着函数名和圆括号 <code>()</code>。圆括号中可以定义参数（parameters），多个参数之间使用逗号 <code>,</code> 分隔。函数体以冒号 <code>:</code> 开始，并且必须缩进。</p>
-<div class="sourceCode" id="cb61"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb61-1"><a href="函数.html#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> function_name(parameter1, parameter2):</span>
-<span id="cb61-2"><a href="函数.html#cb61-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># do something</span></span>
-<span id="cb61-3"><a href="函数.html#cb61-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> something</span></code></pre></div>
+<div class="sourceCode" id="cb61"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb61-1"><a href="函数.html#cb61-1" tabindex="-1"></a><span class="kw">def</span> function_name(parameter1, parameter2):</span>
+<span id="cb61-2"><a href="函数.html#cb61-2" tabindex="-1"></a>    <span class="co"># do something</span></span>
+<span id="cb61-3"><a href="函数.html#cb61-3" tabindex="-1"></a>    <span class="cf">return</span> something</span></code></pre></div>
 <p>函数的定义不会被执行，只有在调用函数时才会执行函数体中的代码。调用函数很容易，只需要在函数名后面加上圆括号 <code>()</code> 即可。</p>
-<div class="sourceCode" id="cb62"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb62-1"><a href="函数.html#cb62-1" aria-hidden="true" tabindex="-1"></a>function_name(argument1, argument2)</span></code></pre></div>
+<div class="sourceCode" id="cb62"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb62-1"><a href="函数.html#cb62-1" tabindex="-1"></a>function_name(argument1, argument2)</span></code></pre></div>
 <p>在函数定义时的 <code>parameter1</code> 和 <code>parameter2</code> 是形参（formal parameters），在函数调用时被实参（actual parameters）<code>argument1</code> 和 <code>argument2</code> 替换。具体的例子如下：</p>
-<div class="sourceCode" id="cb63"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb63-1"><a href="函数.html#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add(a, b):</span>
-<span id="cb63-2"><a href="函数.html#cb63-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">+</span> b</span>
-<span id="cb63-3"><a href="函数.html#cb63-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb63-4"><a href="函数.html#cb63-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(add(<span class="dv">1</span>, <span class="dv">2</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb63"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb63-1"><a href="函数.html#cb63-1" tabindex="-1"></a><span class="kw">def</span> add(a, b):</span>
+<span id="cb63-2"><a href="函数.html#cb63-2" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">+</span> b</span>
+<span id="cb63-3"><a href="函数.html#cb63-3" tabindex="-1"></a></span>
+<span id="cb63-4"><a href="函数.html#cb63-4" tabindex="-1"></a><span class="bu">print</span>(add(<span class="dv">1</span>, <span class="dv">2</span>))</span></code></pre></div>
 <p>我们再来看看 <code>return</code> 关键字。<code>return</code> 用于返回函数的值，如果没有 <code>return</code> 语句，函数会返回 <code>None</code>。<code>return</code> 语句可以出现在函数体的任何位置，一旦执行到 <code>return</code> 语句，函数就会返回，不会再执行后面的语句。举个例子：</p>
-<div class="sourceCode" id="cb64"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb64-1"><a href="函数.html#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add(a, b):</span>
-<span id="cb64-2"><a href="函数.html#cb64-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(a <span class="op">+</span> b)</span>
-<span id="cb64-3"><a href="函数.html#cb64-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">&#39;Mission complete.&#39;</span></span>
-<span id="cb64-4"><a href="函数.html#cb64-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(a <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> b)</span>
-<span id="cb64-5"><a href="函数.html#cb64-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb64-6"><a href="函数.html#cb64-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(add(<span class="dv">1</span>, <span class="dv">2</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb64"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb64-1"><a href="函数.html#cb64-1" tabindex="-1"></a><span class="kw">def</span> add(a, b):</span>
+<span id="cb64-2"><a href="函数.html#cb64-2" tabindex="-1"></a>    <span class="bu">print</span>(a <span class="op">+</span> b)</span>
+<span id="cb64-3"><a href="函数.html#cb64-3" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">&#39;Mission complete.&#39;</span></span>
+<span id="cb64-4"><a href="函数.html#cb64-4" tabindex="-1"></a>    <span class="bu">print</span>(a <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> b)</span>
+<span id="cb64-5"><a href="函数.html#cb64-5" tabindex="-1"></a></span>
+<span id="cb64-6"><a href="函数.html#cb64-6" tabindex="-1"></a><span class="bu">print</span>(add(<span class="dv">1</span>, <span class="dv">2</span>))</span></code></pre></div>
 <p>输出结果为：</p>
-<div class="sourceCode" id="cb65"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb65-1"><a href="函数.html#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="dv">2</span></span>
-<span id="cb65-2"><a href="函数.html#cb65-2" aria-hidden="true" tabindex="-1"></a>Mission complete.</span></code></pre></div>
+<div class="sourceCode" id="cb65"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb65-1"><a href="函数.html#cb65-1" tabindex="-1"></a><span class="dv">1</span> <span class="dv">2</span></span>
+<span id="cb65-2"><a href="函数.html#cb65-2" tabindex="-1"></a>Mission complete.</span></code></pre></div>
 <p>可以看到，<code>print(a + 2 * b)</code> 没有被执行。</p>
 <div id="作用域" class="section level2 hasAnchor" number="5.1">
 <h2><span class="header-section-number">5.1</span> 作用域<a href="函数.html#作用域" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>在函数中定义的变量只能在函数内部使用，这个变量的作用域是局部的。如果在函数外部定义了一个变量，那么这个变量的作用域是全局的，可以在函数内部使用。</p>
-<div class="sourceCode" id="cb66"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb66-1"><a href="函数.html#cb66-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb66-2"><a href="函数.html#cb66-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb66-3"><a href="函数.html#cb66-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add(b):</span>
-<span id="cb66-4"><a href="函数.html#cb66-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">+</span> b</span>
-<span id="cb66-5"><a href="函数.html#cb66-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb66-6"><a href="函数.html#cb66-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(add(<span class="dv">2</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb66"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb66-1"><a href="函数.html#cb66-1" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb66-2"><a href="函数.html#cb66-2" tabindex="-1"></a></span>
+<span id="cb66-3"><a href="函数.html#cb66-3" tabindex="-1"></a><span class="kw">def</span> add(b):</span>
+<span id="cb66-4"><a href="函数.html#cb66-4" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">+</span> b</span>
+<span id="cb66-5"><a href="函数.html#cb66-5" tabindex="-1"></a></span>
+<span id="cb66-6"><a href="函数.html#cb66-6" tabindex="-1"></a><span class="bu">print</span>(add(<span class="dv">2</span>))</span></code></pre></div>
 <p>输出结果为：</p>
-<div class="sourceCode" id="cb67"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb67-1"><a href="函数.html#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span></span></code></pre></div>
+<div class="sourceCode" id="cb67"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb67-1"><a href="函数.html#cb67-1" tabindex="-1"></a><span class="dv">3</span></span></code></pre></div>
 <p>如果在函数内部定义了一个与全局变量同名的变量，那么函数内部的变量会覆盖全局变量。</p>
-<div class="sourceCode" id="cb68"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb68-1"><a href="函数.html#cb68-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb68-2"><a href="函数.html#cb68-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-3"><a href="函数.html#cb68-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add(a, b):</span>
-<span id="cb68-4"><a href="函数.html#cb68-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">+</span> b</span>
-<span id="cb68-5"><a href="函数.html#cb68-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb68-6"><a href="函数.html#cb68-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(add(<span class="dv">2</span>, <span class="dv">3</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb68"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb68-1"><a href="函数.html#cb68-1" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb68-2"><a href="函数.html#cb68-2" tabindex="-1"></a></span>
+<span id="cb68-3"><a href="函数.html#cb68-3" tabindex="-1"></a><span class="kw">def</span> add(a, b):</span>
+<span id="cb68-4"><a href="函数.html#cb68-4" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">+</span> b</span>
+<span id="cb68-5"><a href="函数.html#cb68-5" tabindex="-1"></a></span>
+<span id="cb68-6"><a href="函数.html#cb68-6" tabindex="-1"></a><span class="bu">print</span>(add(<span class="dv">2</span>, <span class="dv">3</span>))</span></code></pre></div>
 <p>输出结果为：</p>
-<div class="sourceCode" id="cb69"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb69-1"><a href="函数.html#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span></span></code></pre></div>
+<div class="sourceCode" id="cb69"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb69-1"><a href="函数.html#cb69-1" tabindex="-1"></a><span class="dv">5</span></span></code></pre></div>
 </div>
 <div id="递归" class="section level2 hasAnchor" number="5.2">
 <h2><span class="header-section-number">5.2</span> 递归<a href="函数.html#递归" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>递归是一种常见的算法，它的思想是把一个问题分解成多个子问题，然后逐个解决子问题。递归函数就是在函数内部调用自身。</p>
-<div class="sourceCode" id="cb70"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb70-1"><a href="函数.html#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> factorial(n):</span>
-<span id="cb70-2"><a href="函数.html#cb70-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n <span class="op">==</span> <span class="dv">1</span>:</span>
-<span id="cb70-3"><a href="函数.html#cb70-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">1</span></span>
-<span id="cb70-4"><a href="函数.html#cb70-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb70-5"><a href="函数.html#cb70-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> n <span class="op">*</span> factorial(n <span class="op">-</span> <span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb70"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb70-1"><a href="函数.html#cb70-1" tabindex="-1"></a><span class="kw">def</span> factorial(n):</span>
+<span id="cb70-2"><a href="函数.html#cb70-2" tabindex="-1"></a>    <span class="cf">if</span> n <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb70-3"><a href="函数.html#cb70-3" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">1</span></span>
+<span id="cb70-4"><a href="函数.html#cb70-4" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb70-5"><a href="函数.html#cb70-5" tabindex="-1"></a>        <span class="cf">return</span> n <span class="op">*</span> factorial(n <span class="op">-</span> <span class="dv">1</span>)</span></code></pre></div>
 
 </div>
 </div>

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 4 流程控制 | 《面向科学研究的 Python 基础》讲义</title>
   <meta name="description" content="本书是 Jim 在清华大学讲授的《面向科学研究的 Python 基础》课程讲义。" />
-  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 4 流程控制 | 《面向科学研究的 Python 基础》讲义" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Jim Zhang" />
 
 
-<meta name="date" content="2022-11-04" />
+<meta name="date" content="2023-04-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -92,7 +92,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -105,7 +105,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -152,7 +152,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="python-简介与环境安装.html"><a href="python-简介与环境安装.html#为什么我会推荐这样的开发环境"><i class="fa fa-check"></i><b>2.2</b> 为什么我会推荐这样的开发环境？</a>
 <ul>
-<li class="chapter" data-level="2.2.1" data-path="python-简介与环境安装.html"><a href="python-简介与环境安装.html#python-3.10-新特性"><i class="fa fa-check"></i><b>2.2.1</b> Python 3.10 新特性</a></li>
+<li class="chapter" data-level="2.2.1" data-path="python-简介与环境安装.html"><a href="python-简介与环境安装.html#python-3.11-新特性"><i class="fa fa-check"></i><b>2.2.1</b> Python 3.11 新特性</a></li>
 <li class="chapter" data-level="2.2.2" data-path="python-简介与环境安装.html"><a href="python-简介与环境安装.html#visual-studio-code"><i class="fa fa-check"></i><b>2.2.2</b> Visual Studio Code</a></li>
 <li class="chapter" data-level="2.2.3" data-path="python-简介与环境安装.html"><a href="python-简介与环境安装.html#jupyter-notebook"><i class="fa fa-check"></i><b>2.2.3</b> Jupyter Notebook</a></li>
 </ul></li>
@@ -257,12 +257,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="if-语句" class="section level3 hasAnchor" number="4.2.1">
 <h3><span class="header-section-number">4.2.1</span> if 语句<a href="流程控制.html#if-语句" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>if 语句是最简单的选择结构，它的语法格式如下：</p>
-<div class="sourceCode" id="cb56"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb56-1"><a href="流程控制.html#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> condition:</span>
-<span id="cb56-2"><a href="流程控制.html#cb56-2" aria-hidden="true" tabindex="-1"></a>    statement</span>
-<span id="cb56-3"><a href="流程控制.html#cb56-3" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> another condition:</span>
-<span id="cb56-4"><a href="流程控制.html#cb56-4" aria-hidden="true" tabindex="-1"></a>    another statement</span>
-<span id="cb56-5"><a href="流程控制.html#cb56-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb56-6"><a href="流程控制.html#cb56-6" aria-hidden="true" tabindex="-1"></a>    final statement</span></code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb56-1"><a href="流程控制.html#cb56-1" tabindex="-1"></a><span class="cf">if</span> condition:</span>
+<span id="cb56-2"><a href="流程控制.html#cb56-2" tabindex="-1"></a>    statement</span>
+<span id="cb56-3"><a href="流程控制.html#cb56-3" tabindex="-1"></a><span class="cf">elif</span> another condition:</span>
+<span id="cb56-4"><a href="流程控制.html#cb56-4" tabindex="-1"></a>    another statement</span>
+<span id="cb56-5"><a href="流程控制.html#cb56-5" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb56-6"><a href="流程控制.html#cb56-6" tabindex="-1"></a>    final statement</span></code></pre></div>
 <p>if 语句的执行流程如下：</p>
 <ol style="list-style-type: decimal">
 <li>首先计算 <code>condition</code> 的值，如果为 <code>True</code>，则执行 <code>statement</code> 语句块，然后结束 <code>if</code> 语句的执行；如果为 <code>False</code>，则计算 <code>another condition</code> 的值，如果为 <code>True</code>，则执行 <code>another statement</code> 语句块，然后结束 <code>if</code> 语句的执行；如果为 <code>False</code>，则执行 <code>final statement</code> 语句块，然后结束 <code>if</code> 语句的执行。</li>
@@ -273,25 +273,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="match-语句" class="section level3 hasAnchor" number="4.2.2">
 <h3><span class="header-section-number">4.2.2</span> match 语句<a href="流程控制.html#match-语句" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>match 语句是 Python 3.10 新增的选择结构，它的语法格式如下：</p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb57-1"><a href="流程控制.html#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="cf">match</span> value:</span>
-<span id="cb57-2"><a href="流程控制.html#cb57-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> condition:</span>
-<span id="cb57-3"><a href="流程控制.html#cb57-3" aria-hidden="true" tabindex="-1"></a>        statement</span>
-<span id="cb57-4"><a href="流程控制.html#cb57-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> another condition:</span>
-<span id="cb57-5"><a href="流程控制.html#cb57-5" aria-hidden="true" tabindex="-1"></a>        another statement</span>
-<span id="cb57-6"><a href="流程控制.html#cb57-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> _:</span>
-<span id="cb57-7"><a href="流程控制.html#cb57-7" aria-hidden="true" tabindex="-1"></a>        final statement</span></code></pre></div>
+<div class="sourceCode" id="cb57"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb57-1"><a href="流程控制.html#cb57-1" tabindex="-1"></a><span class="cf">match</span> value:</span>
+<span id="cb57-2"><a href="流程控制.html#cb57-2" tabindex="-1"></a>    <span class="cf">case</span> condition:</span>
+<span id="cb57-3"><a href="流程控制.html#cb57-3" tabindex="-1"></a>        statement</span>
+<span id="cb57-4"><a href="流程控制.html#cb57-4" tabindex="-1"></a>    <span class="cf">case</span> another condition:</span>
+<span id="cb57-5"><a href="流程控制.html#cb57-5" tabindex="-1"></a>        another statement</span>
+<span id="cb57-6"><a href="流程控制.html#cb57-6" tabindex="-1"></a>    <span class="cf">case</span> _:</span>
+<span id="cb57-7"><a href="流程控制.html#cb57-7" tabindex="-1"></a>        final statement</span></code></pre></div>
 <p>这很容易理解，我们举个例子：</p>
-<div class="sourceCode" id="cb58"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb58-1"><a href="流程控制.html#cb58-1" aria-hidden="true" tabindex="-1"></a>lang <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Enter your language: &quot;</span>)</span>
-<span id="cb58-2"><a href="流程控制.html#cb58-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb58-3"><a href="流程控制.html#cb58-3" aria-hidden="true" tabindex="-1"></a><span class="cf">match</span> lang:</span>
-<span id="cb58-4"><a href="流程控制.html#cb58-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> <span class="st">&quot;Python&quot;</span>:</span>
-<span id="cb58-5"><a href="流程控制.html#cb58-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;You are learning Python&quot;</span>)</span>
-<span id="cb58-6"><a href="流程控制.html#cb58-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> <span class="st">&quot;Java&quot;</span>:</span>
-<span id="cb58-7"><a href="流程控制.html#cb58-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;You are learning Java&quot;</span>) </span>
-<span id="cb58-8"><a href="流程控制.html#cb58-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> <span class="st">&quot;C++&quot;</span>:</span>
-<span id="cb58-9"><a href="流程控制.html#cb58-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;You are learning C++&quot;</span>)</span>
-<span id="cb58-10"><a href="流程控制.html#cb58-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> _:</span>
-<span id="cb58-11"><a href="流程控制.html#cb58-11" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;You are learning something else&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb58-1"><a href="流程控制.html#cb58-1" tabindex="-1"></a>lang <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Enter your language: &quot;</span>)</span>
+<span id="cb58-2"><a href="流程控制.html#cb58-2" tabindex="-1"></a></span>
+<span id="cb58-3"><a href="流程控制.html#cb58-3" tabindex="-1"></a><span class="cf">match</span> lang:</span>
+<span id="cb58-4"><a href="流程控制.html#cb58-4" tabindex="-1"></a>    <span class="cf">case</span> <span class="st">&quot;Python&quot;</span>:</span>
+<span id="cb58-5"><a href="流程控制.html#cb58-5" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;You are learning Python&quot;</span>)</span>
+<span id="cb58-6"><a href="流程控制.html#cb58-6" tabindex="-1"></a>    <span class="cf">case</span> <span class="st">&quot;Java&quot;</span>:</span>
+<span id="cb58-7"><a href="流程控制.html#cb58-7" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;You are learning Java&quot;</span>) </span>
+<span id="cb58-8"><a href="流程控制.html#cb58-8" tabindex="-1"></a>    <span class="cf">case</span> <span class="st">&quot;C++&quot;</span>:</span>
+<span id="cb58-9"><a href="流程控制.html#cb58-9" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;You are learning C++&quot;</span>)</span>
+<span id="cb58-10"><a href="流程控制.html#cb58-10" tabindex="-1"></a>    <span class="cf">case</span> _:</span>
+<span id="cb58-11"><a href="流程控制.html#cb58-11" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;You are learning something else&quot;</span>)</span></code></pre></div>
 <p>这个例子中，我们使用 <code>match</code> 语句来判断用户输入的语言，如果是 <code>Python</code>、<code>Java</code> 或 <code>C++</code>，则输出相应的提示，否则输出 <code>You are learning something else</code>。</p>
 </div>
 </div>
@@ -301,16 +301,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="while-循环" class="section level3 hasAnchor" number="4.3.1">
 <h3><span class="header-section-number">4.3.1</span> while 循环<a href="流程控制.html#while-循环" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>while 循环是一种循环结构，它的语法格式如下：</p>
-<div class="sourceCode" id="cb59"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb59-1"><a href="流程控制.html#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> condition:</span>
-<span id="cb59-2"><a href="流程控制.html#cb59-2" aria-hidden="true" tabindex="-1"></a>    statement</span></code></pre></div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb59-1"><a href="流程控制.html#cb59-1" tabindex="-1"></a><span class="cf">while</span> condition:</span>
+<span id="cb59-2"><a href="流程控制.html#cb59-2" tabindex="-1"></a>    statement</span></code></pre></div>
 <p>while 循环的执行流程如下：</p>
 <p>首先计算 <code>condition</code> 的值，如果为 <code>True</code>，则执行 <code>statement</code> 语句块，然后再次计算 <code>condition</code> 的值，如果为 <code>True</code>，则继续执行 <code>statement</code> 语句块，直到 <code>condition</code> 的值为 <code>False</code>，则结束 <code>while</code> 循环的执行。</p>
 </div>
 <div id="for-循环" class="section level3 hasAnchor" number="4.3.2">
 <h3><span class="header-section-number">4.3.2</span> for 循环<a href="流程控制.html#for-循环" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>for 循环是另一种循环结构，它的语法格式如下：</p>
-<div class="sourceCode" id="cb60"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb60-1"><a href="流程控制.html#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> item <span class="kw">in</span> iterable:</span>
-<span id="cb60-2"><a href="流程控制.html#cb60-2" aria-hidden="true" tabindex="-1"></a>    statement</span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb60-1"><a href="流程控制.html#cb60-1" tabindex="-1"></a><span class="cf">for</span> item <span class="kw">in</span> iterable:</span>
+<span id="cb60-2"><a href="流程控制.html#cb60-2" tabindex="-1"></a>    statement</span></code></pre></div>
 <p>for 循环的执行流程如下：</p>
 </div>
 <div id="提前退出循环" class="section level3 hasAnchor" number="4.3.3">
